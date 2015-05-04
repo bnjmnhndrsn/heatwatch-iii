@@ -1,14 +1,14 @@
 var channel = Backbone.Radio.channel('global');
 var data = require('../data/cities');
 
-var apiRoot = "http://api.openweathermap.org/data/2.5/group?id=";
+var apiRoot = "http://api.openweathermap.org/data/2.5/group?units=imperial&id=";
 
 var Cities = Backbone.Collection.extend({
 	url: function(args){
 		return apiRoot + this.pluck('id').join(',');
 	},
 	parse: function(response){
-		if (reponse.list){
+		if (response.list){
 			return response.list;
 		}
 		
@@ -18,6 +18,9 @@ var Cities = Backbone.Collection.extend({
 
 var cities = new Cities(data);
 
-channel.reply('get:cities', function(){
+channel.reply('get:cities', function(n){
+	if (n) {
+		return new Cities(cities.take(n));
+	}
 	return cities;
 });

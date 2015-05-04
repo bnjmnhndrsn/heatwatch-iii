@@ -1,8 +1,9 @@
 var ItemView = Marionette.ItemView.extend({
+	tagName: 'tr',
 	template: '#item-view',
 	templateHelpers: {
 		getTemperature: function(){
-			return this.temperature || 'asdf';
+			return this.main.temp || 'N/A';
 		}
 	}
 });
