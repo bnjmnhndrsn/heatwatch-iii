@@ -3,6 +3,18 @@ var data = require('../data/cities');
 
 var apiRoot = "http://api.openweathermap.org/data/2.5/group?units=imperial&id=";
 
+var City = Backbone.Model.extend({
+    url: function(args){
+        var params;
+        
+        if (this.has('lat') && this.has('lng')) {
+            params = this.pick('lat', 'lng');
+        } else if (this.has('zip')) {   
+            params = this.pick('zip')
+        }
+    }
+});
+
 var Cities = Backbone.Collection.extend({
 	url: function(args){
 		return apiRoot + this.pluck('id').join(',');
