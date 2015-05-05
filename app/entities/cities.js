@@ -3,9 +3,12 @@ var data = require('../data/cities');
 
 var apiRoot = "http://api.openweathermap.org/data/2.5/group?units=imperial&id=";
 
+var fakeCityRoot = "fake/city.json";
+var fakeCitiesRoot = "fake/sample.json";
+
 var City = Backbone.Model.extend({
-    url: function(args){
-        var params;
+    url: function(args){		
+		var params;
         
         if (this.has('lat') && this.has('lng')) {
             params = this.pick('lat', 'lng');
@@ -17,6 +20,7 @@ var City = Backbone.Model.extend({
 
 var Cities = Backbone.Collection.extend({
 	url: function(args){
+        return fakeCitiesRoot;
 		return apiRoot + this.pluck('id').join(',');
 	},
 	parse: function(response){
@@ -29,6 +33,10 @@ var Cities = Backbone.Collection.extend({
 });
 
 var cities = new Cities(data);
+
+channel.reply('get:city', function(){
+	return new City;
+});
 
 channel.reply('get:cities', function(n){
 	if (n) {

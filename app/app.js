@@ -2,6 +2,7 @@ var channel = Backbone.Radio.channel('global');
 
 //entities
 require('./entities/cities');
+require('./entities/user');
 
 //apps
 var Chart = require('./chart');
