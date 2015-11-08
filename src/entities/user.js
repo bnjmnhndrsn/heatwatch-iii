@@ -1,11 +1,15 @@
+// Dependencies
+var Backbone = require('backbone');
+
+// App
 var channel = Backbone.Radio.channel('global');
- 
+
 var User = Backbone.Model.extend({
 	getCity: function(){
 		if (!this.has('city')){
 			this._city();
-		} 
-		
+		}
+
 		return this.get('city');
 	},
 	_city: function(){

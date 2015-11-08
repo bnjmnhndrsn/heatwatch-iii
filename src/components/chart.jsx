@@ -1,5 +1,6 @@
 // Dependencies
 var React = require('react');
+var Backbone = require('backbone');
 
 // App
 var channel = Backbone.Radio.channel('global');

@@ -1,6 +1,8 @@
 // Dependencies
 var React = require('react');
 var ReactDOM = require('react-dom');
+var Backbone = require('backbone');
+var Marionette = require('backbone.marionette');
 
 // App
 var Chart = require('../components/chart');
@@ -22,7 +24,7 @@ var View = Marionette.ItemView.extend({
 var ChartController = Marionette.Object.extend({
     initialize: function(){
         var view = new View();
-        channel.command('show:view', view);
+        channel.request('show:view', view);
     }
 });
 

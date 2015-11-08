@@ -1,10 +1,13 @@
-var channel = Backbone.Radio.channel('global');
+// Dependencies
+var $ = require('jquery');
+var Backbone = require('backbone');
+var Marionette = require('backbone.marionette')
+require('backbone.radio');
 
-//entities
+//App
 require('./entities/cities');
 require('./entities/user');
-
-//apps
+var channel = Backbone.Radio.channel('global');
 var Chart = require('./chart');
 
 var app = new Marionette.Application();
@@ -16,7 +19,7 @@ app.on('start', function(){
 		regions: { "app": "#app" }
 	});
 
-	channel.comply('show:view', function(view){
+	channel.reply('show:view', function(view){
 		rm.get('app').show(view);
 	});
 

@@ -10,7 +10,11 @@
   "private": false,
   "dependencies": {
     "backbone": "^1.2.3",
+    "backbone.babysitter": "^0.1.10",
+    "backbone.marionette": "^2.4.3",
+    "backbone.radio": "^1.0.2",
     "bootstrap": "git://github.com/twbs/bootstrap.git#v4-dev",
+    "jquery": "^2.1.4",
     "history": "^1.13.0",
     "react": "^0.14.1",
     "react-dom": "^0.14.1",

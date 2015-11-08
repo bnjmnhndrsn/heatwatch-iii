@@ -1,3 +1,5 @@
+var Backbone = require('backbone');
+
 var channel = Backbone.Radio.channel('global');
 var data = require('../data/cities');
 
