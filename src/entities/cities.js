@@ -7,18 +7,22 @@ var fakeCityRoot = "fake/city.json";
 var fakeCitiesRoot = "fake/sample.json";
 
 var City = Backbone.Model.extend({
-    url: function(args){		
+    url: function(args){
 		var params;
-        
+
         if (this.has('lat') && this.has('lng')) {
             params = this.pick('lat', 'lng');
-        } else if (this.has('zip')) {   
+        } else if (this.has('zip')) {
             params = this.pick('zip')
         }
-    }
+    },
+	getTemperature: function(){
+		return (this.get('main') || {}).temp || 'N/A';
+	}
 });
 
 var Cities = Backbone.Collection.extend({
+	model: City,
 	url: function(args){
         return fakeCitiesRoot;
 		return apiRoot + this.pluck('id').join(',');
@@ -27,7 +31,7 @@ var Cities = Backbone.Collection.extend({
 		if (response.list){
 			return response.list;
 		}
-		
+
 		return response;
 	}
 });
