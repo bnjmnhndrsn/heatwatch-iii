@@ -1,0 +1,2103 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.33
+4 verbose readDependencies using package.json deps
+5 verbose install where, deps [ '/Users/ben/Documents/Code/javascripts/is_it_colder',
+5 verbose install   [ 'backbone',
+5 verbose install     'bootstrap',
+5 verbose install     'history',
+5 verbose install     'react',
+5 verbose install     'react-dom',
+5 verbose install     'react-router',
+5 verbose install     'babelify',
+5 verbose install     'browser-sync',
+5 verbose install     'browserify',
+5 verbose install     'gulp',
+5 verbose install     'gulp-sass',
+5 verbose install     'gulp-sourcemaps',
+5 verbose install     'vinyl-source-stream',
+5 verbose install     'watchify' ] ]
+6 info preinstall heatwatch@
+7 verbose readDependencies using package.json deps
+8 verbose cache add [ 'bootstrap@git://github.com/twbs/bootstrap.git#v4-dev', null ]
+9 verbose cache add name=undefined spec="bootstrap@git://github.com/twbs/bootstrap.git#v4-dev" args=["bootstrap@git://github.com/twbs/bootstrap.git#v4-dev",null]
+10 verbose parsed url { protocol: null,
+10 verbose parsed url   slashes: null,
+10 verbose parsed url   auth: null,
+10 verbose parsed url   host: null,
+10 verbose parsed url   port: null,
+10 verbose parsed url   hostname: null,
+10 verbose parsed url   hash: '#v4-dev',
+10 verbose parsed url   search: null,
+10 verbose parsed url   query: null,
+10 verbose parsed url   pathname: 'bootstrap@git://github.com/twbs/bootstrap.git',
+10 verbose parsed url   path: 'bootstrap@git://github.com/twbs/bootstrap.git',
+10 verbose parsed url   href: 'bootstrap@git://github.com/twbs/bootstrap.git#v4-dev' }
+11 verbose cache add [ 'history@^1.13.0', null ]
+12 verbose cache add name=undefined spec="history@^1.13.0" args=["history@^1.13.0",null]
+13 verbose parsed url { protocol: null,
+13 verbose parsed url   slashes: null,
+13 verbose parsed url   auth: null,
+13 verbose parsed url   host: null,
+13 verbose parsed url   port: null,
+13 verbose parsed url   hostname: null,
+13 verbose parsed url   hash: null,
+13 verbose parsed url   search: null,
+13 verbose parsed url   query: null,
+13 verbose parsed url   pathname: 'history@^1.13.0',
+13 verbose parsed url   path: 'history@^1.13.0',
+13 verbose parsed url   href: 'history@^1.13.0' }
+14 verbose cache add [ 'react@^0.14.1', null ]
+15 verbose cache add name=undefined spec="react@^0.14.1" args=["react@^0.14.1",null]
+16 verbose parsed url { protocol: null,
+16 verbose parsed url   slashes: null,
+16 verbose parsed url   auth: null,
+16 verbose parsed url   host: null,
+16 verbose parsed url   port: null,
+16 verbose parsed url   hostname: null,
+16 verbose parsed url   hash: null,
+16 verbose parsed url   search: null,
+16 verbose parsed url   query: null,
+16 verbose parsed url   pathname: 'react@^0.14.1',
+16 verbose parsed url   path: 'react@^0.14.1',
+16 verbose parsed url   href: 'react@^0.14.1' }
+17 verbose cache add name="bootstrap" spec="git://github.com/twbs/bootstrap.git#v4-dev" args=["bootstrap","git://github.com/twbs/bootstrap.git#v4-dev"]
+18 verbose parsed url { protocol: 'git:',
+18 verbose parsed url   slashes: true,
+18 verbose parsed url   auth: null,
+18 verbose parsed url   host: 'github.com',
+18 verbose parsed url   port: null,
+18 verbose parsed url   hostname: 'github.com',
+18 verbose parsed url   hash: '#v4-dev',
+18 verbose parsed url   search: null,
+18 verbose parsed url   query: null,
+18 verbose parsed url   pathname: '/twbs/bootstrap.git',
+18 verbose parsed url   path: '/twbs/bootstrap.git',
+18 verbose parsed url   href: 'git://github.com/twbs/bootstrap.git#v4-dev' }
+19 verbose cache add name="history" spec="^1.13.0" args=["history","^1.13.0"]
+20 verbose parsed url { protocol: null,
+20 verbose parsed url   slashes: null,
+20 verbose parsed url   auth: null,
+20 verbose parsed url   host: null,
+20 verbose parsed url   port: null,
+20 verbose parsed url   hostname: null,
+20 verbose parsed url   hash: null,
+20 verbose parsed url   search: null,
+20 verbose parsed url   query: null,
+20 verbose parsed url   pathname: '^1.13.0',
+20 verbose parsed url   path: '^1.13.0',
+20 verbose parsed url   href: '^1.13.0' }
+21 verbose addNamed [ 'history', '^1.13.0' ]
+22 verbose addNamed [ null, '>=1.13.0-0 <2.0.0-0' ]
+23 verbose cache add [ 'react-dom@^0.14.1', null ]
+24 verbose cache add name=undefined spec="react-dom@^0.14.1" args=["react-dom@^0.14.1",null]
+25 verbose parsed url { protocol: null,
+25 verbose parsed url   slashes: null,
+25 verbose parsed url   auth: null,
+25 verbose parsed url   host: null,
+25 verbose parsed url   port: null,
+25 verbose parsed url   hostname: null,
+25 verbose parsed url   hash: null,
+25 verbose parsed url   search: null,
+25 verbose parsed url   query: null,
+25 verbose parsed url   pathname: 'react-dom@^0.14.1',
+25 verbose parsed url   path: 'react-dom@^0.14.1',
+25 verbose parsed url   href: 'react-dom@^0.14.1' }
+26 verbose cache add [ 'react-router@^1.0.0-rc3', null ]
+27 verbose cache add name=undefined spec="react-router@^1.0.0-rc3" args=["react-router@^1.0.0-rc3",null]
+28 verbose parsed url { protocol: null,
+28 verbose parsed url   slashes: null,
+28 verbose parsed url   auth: null,
+28 verbose parsed url   host: null,
+28 verbose parsed url   port: null,
+28 verbose parsed url   hostname: null,
+28 verbose parsed url   hash: null,
+28 verbose parsed url   search: null,
+28 verbose parsed url   query: null,
+28 verbose parsed url   pathname: 'react-router@^1.0.0-rc3',
+28 verbose parsed url   path: 'react-router@^1.0.0-rc3',
+28 verbose parsed url   href: 'react-router@^1.0.0-rc3' }
+29 verbose cache add name="react" spec="^0.14.1" args=["react","^0.14.1"]
+30 verbose parsed url { protocol: null,
+30 verbose parsed url   slashes: null,
+30 verbose parsed url   auth: null,
+30 verbose parsed url   host: null,
+30 verbose parsed url   port: null,
+30 verbose parsed url   hostname: null,
+30 verbose parsed url   hash: null,
+30 verbose parsed url   search: null,
+30 verbose parsed url   query: null,
+30 verbose parsed url   pathname: '^0.14.1',
+30 verbose parsed url   path: '^0.14.1',
+30 verbose parsed url   href: '^0.14.1' }
+31 verbose addNamed [ 'react', '^0.14.1' ]
+32 verbose addNamed [ null, '>=0.14.1-0 <0.15.0-0' ]
+33 silly lockFile a03500bb-it-github-com-twbs-bootstrap-git git://github.com/twbs/bootstrap.git
+34 verbose lock git://github.com/twbs/bootstrap.git /Users/ben/.npm/a03500bb-it-github-com-twbs-bootstrap-git.lock
+35 silly lockFile c0e38860-history-1-13-0 history@^1.13.0
+36 verbose lock history@^1.13.0 /Users/ben/.npm/c0e38860-history-1-13-0.lock
+37 silly lockFile 7f93a2de-react-0-14-1 react@^0.14.1
+38 verbose lock react@^0.14.1 /Users/ben/.npm/7f93a2de-react-0-14-1.lock
+39 verbose cache add name="react-dom" spec="^0.14.1" args=["react-dom","^0.14.1"]
+40 verbose parsed url { protocol: null,
+40 verbose parsed url   slashes: null,
+40 verbose parsed url   auth: null,
+40 verbose parsed url   host: null,
+40 verbose parsed url   port: null,
+40 verbose parsed url   hostname: null,
+40 verbose parsed url   hash: null,
+40 verbose parsed url   search: null,
+40 verbose parsed url   query: null,
+40 verbose parsed url   pathname: '^0.14.1',
+40 verbose parsed url   path: '^0.14.1',
+40 verbose parsed url   href: '^0.14.1' }
+41 verbose addNamed [ 'react-dom', '^0.14.1' ]
+42 verbose addNamed [ null, '>=0.14.1-0 <0.15.0-0' ]
+43 silly lockFile baa95e4c-react-dom-0-14-1 react-dom@^0.14.1
+44 verbose lock react-dom@^0.14.1 /Users/ben/.npm/baa95e4c-react-dom-0-14-1.lock
+45 verbose cache add [ 'babelify@^6.4.0', null ]
+46 verbose cache add name=undefined spec="babelify@^6.4.0" args=["babelify@^6.4.0",null]
+47 verbose parsed url { protocol: null,
+47 verbose parsed url   slashes: null,
+47 verbose parsed url   auth: null,
+47 verbose parsed url   host: null,
+47 verbose parsed url   port: null,
+47 verbose parsed url   hostname: null,
+47 verbose parsed url   hash: null,
+47 verbose parsed url   search: null,
+47 verbose parsed url   query: null,
+47 verbose parsed url   pathname: 'babelify@^6.4.0',
+47 verbose parsed url   path: 'babelify@^6.4.0',
+47 verbose parsed url   href: 'babelify@^6.4.0' }
+48 verbose cache add [ 'browser-sync@^2.9.11', null ]
+49 verbose cache add name=undefined spec="browser-sync@^2.9.11" args=["browser-sync@^2.9.11",null]
+50 verbose parsed url { protocol: null,
+50 verbose parsed url   slashes: null,
+50 verbose parsed url   auth: null,
+50 verbose parsed url   host: null,
+50 verbose parsed url   port: null,
+50 verbose parsed url   hostname: null,
+50 verbose parsed url   hash: null,
+50 verbose parsed url   search: null,
+50 verbose parsed url   query: null,
+50 verbose parsed url   pathname: 'browser-sync@^2.9.11',
+50 verbose parsed url   path: 'browser-sync@^2.9.11',
+50 verbose parsed url   href: 'browser-sync@^2.9.11' }
+51 verbose cache add [ 'browserify@^12.0.1', null ]
+52 verbose cache add name=undefined spec="browserify@^12.0.1" args=["browserify@^12.0.1",null]
+53 verbose parsed url { protocol: null,
+53 verbose parsed url   slashes: null,
+53 verbose parsed url   auth: null,
+53 verbose parsed url   host: null,
+53 verbose parsed url   port: null,
+53 verbose parsed url   hostname: null,
+53 verbose parsed url   hash: null,
+53 verbose parsed url   search: null,
+53 verbose parsed url   query: null,
+53 verbose parsed url   pathname: 'browserify@^12.0.1',
+53 verbose parsed url   path: 'browserify@^12.0.1',
+53 verbose parsed url   href: 'browserify@^12.0.1' }
+54 verbose cache add name="react-router" spec="^1.0.0-rc3" args=["react-router","^1.0.0-rc3"]
+55 verbose parsed url { protocol: null,
+55 verbose parsed url   slashes: null,
+55 verbose parsed url   auth: null,
+55 verbose parsed url   host: null,
+55 verbose parsed url   port: null,
+55 verbose parsed url   hostname: null,
+55 verbose parsed url   hash: null,
+55 verbose parsed url   search: null,
+55 verbose parsed url   query: null,
+55 verbose parsed url   pathname: '^1.0.0-rc3',
+55 verbose parsed url   path: '^1.0.0-rc3',
+55 verbose parsed url   href: '^1.0.0-rc3' }
+56 verbose addNamed [ 'react-router', '^1.0.0-rc3' ]
+57 verbose addNamed [ null, '>=1.0.0-rc3 <2.0.0-0' ]
+58 silly lockFile e2b1bdee-react-router-1-0-0-rc3 react-router@^1.0.0-rc3
+59 verbose lock react-router@^1.0.0-rc3 /Users/ben/.npm/e2b1bdee-react-router-1-0-0-rc3.lock
+60 verbose cache add name="babelify" spec="^6.4.0" args=["babelify","^6.4.0"]
+61 verbose parsed url { protocol: null,
+61 verbose parsed url   slashes: null,
+61 verbose parsed url   auth: null,
+61 verbose parsed url   host: null,
+61 verbose parsed url   port: null,
+61 verbose parsed url   hostname: null,
+61 verbose parsed url   hash: null,
+61 verbose parsed url   search: null,
+61 verbose parsed url   query: null,
+61 verbose parsed url   pathname: '^6.4.0',
+61 verbose parsed url   path: '^6.4.0',
+61 verbose parsed url   href: '^6.4.0' }
+62 verbose addNamed [ 'babelify', '^6.4.0' ]
+63 verbose addNamed [ null, '>=6.4.0-0 <7.0.0-0' ]
+64 silly lockFile 11649136-babelify-6-4-0 babelify@^6.4.0
+65 verbose lock babelify@^6.4.0 /Users/ben/.npm/11649136-babelify-6-4-0.lock
+66 verbose cache add name="browser-sync" spec="^2.9.11" args=["browser-sync","^2.9.11"]
+67 verbose parsed url { protocol: null,
+67 verbose parsed url   slashes: null,
+67 verbose parsed url   auth: null,
+67 verbose parsed url   host: null,
+67 verbose parsed url   port: null,
+67 verbose parsed url   hostname: null,
+67 verbose parsed url   hash: null,
+67 verbose parsed url   search: null,
+67 verbose parsed url   query: null,
+67 verbose parsed url   pathname: '^2.9.11',
+67 verbose parsed url   path: '^2.9.11',
+67 verbose parsed url   href: '^2.9.11' }
+68 verbose addNamed [ 'browser-sync', '^2.9.11' ]
+69 verbose addNamed [ null, '>=2.9.11-0 <3.0.0-0' ]
+70 silly lockFile 45bae07c-browser-sync-2-9-11 browser-sync@^2.9.11
+71 verbose lock browser-sync@^2.9.11 /Users/ben/.npm/45bae07c-browser-sync-2-9-11.lock
+72 verbose cache add [ 'gulp@^3.9.0', null ]
+73 verbose cache add name=undefined spec="gulp@^3.9.0" args=["gulp@^3.9.0",null]
+74 verbose parsed url { protocol: null,
+74 verbose parsed url   slashes: null,
+74 verbose parsed url   auth: null,
+74 verbose parsed url   host: null,
+74 verbose parsed url   port: null,
+74 verbose parsed url   hostname: null,
+74 verbose parsed url   hash: null,
+74 verbose parsed url   search: null,
+74 verbose parsed url   query: null,
+74 verbose parsed url   pathname: 'gulp@^3.9.0',
+74 verbose parsed url   path: 'gulp@^3.9.0',
+74 verbose parsed url   href: 'gulp@^3.9.0' }
+75 verbose cache add [ 'gulp-sass@^2.1.0', null ]
+76 verbose cache add name=undefined spec="gulp-sass@^2.1.0" args=["gulp-sass@^2.1.0",null]
+77 verbose parsed url { protocol: null,
+77 verbose parsed url   slashes: null,
+77 verbose parsed url   auth: null,
+77 verbose parsed url   host: null,
+77 verbose parsed url   port: null,
+77 verbose parsed url   hostname: null,
+77 verbose parsed url   hash: null,
+77 verbose parsed url   search: null,
+77 verbose parsed url   query: null,
+77 verbose parsed url   pathname: 'gulp-sass@^2.1.0',
+77 verbose parsed url   path: 'gulp-sass@^2.1.0',
+77 verbose parsed url   href: 'gulp-sass@^2.1.0' }
+78 verbose cache add [ 'gulp-sourcemaps@^1.6.0', null ]
+79 verbose cache add name=undefined spec="gulp-sourcemaps@^1.6.0" args=["gulp-sourcemaps@^1.6.0",null]
+80 verbose parsed url { protocol: null,
+80 verbose parsed url   slashes: null,
+80 verbose parsed url   auth: null,
+80 verbose parsed url   host: null,
+80 verbose parsed url   port: null,
+80 verbose parsed url   hostname: null,
+80 verbose parsed url   hash: null,
+80 verbose parsed url   search: null,
+80 verbose parsed url   query: null,
+80 verbose parsed url   pathname: 'gulp-sourcemaps@^1.6.0',
+80 verbose parsed url   path: 'gulp-sourcemaps@^1.6.0',
+80 verbose parsed url   href: 'gulp-sourcemaps@^1.6.0' }
+81 verbose cache add [ 'vinyl-source-stream@^1.1.0', null ]
+82 verbose cache add name=undefined spec="vinyl-source-stream@^1.1.0" args=["vinyl-source-stream@^1.1.0",null]
+83 verbose parsed url { protocol: null,
+83 verbose parsed url   slashes: null,
+83 verbose parsed url   auth: null,
+83 verbose parsed url   host: null,
+83 verbose parsed url   port: null,
+83 verbose parsed url   hostname: null,
+83 verbose parsed url   hash: null,
+83 verbose parsed url   search: null,
+83 verbose parsed url   query: null,
+83 verbose parsed url   pathname: 'vinyl-source-stream@^1.1.0',
+83 verbose parsed url   path: 'vinyl-source-stream@^1.1.0',
+83 verbose parsed url   href: 'vinyl-source-stream@^1.1.0' }
+84 verbose cache add name="browserify" spec="^12.0.1" args=["browserify","^12.0.1"]
+85 verbose parsed url { protocol: null,
+85 verbose parsed url   slashes: null,
+85 verbose parsed url   auth: null,
+85 verbose parsed url   host: null,
+85 verbose parsed url   port: null,
+85 verbose parsed url   hostname: null,
+85 verbose parsed url   hash: null,
+85 verbose parsed url   search: null,
+85 verbose parsed url   query: null,
+85 verbose parsed url   pathname: '^12.0.1',
+85 verbose parsed url   path: '^12.0.1',
+85 verbose parsed url   href: '^12.0.1' }
+86 verbose addNamed [ 'browserify', '^12.0.1' ]
+87 verbose addNamed [ null, '>=12.0.1-0 <13.0.0-0' ]
+88 silly lockFile f062ed26-browserify-12-0-1 browserify@^12.0.1
+89 verbose lock browserify@^12.0.1 /Users/ben/.npm/f062ed26-browserify-12-0-1.lock
+90 silly addNameRange { name: 'history', range: '>=1.13.0-0 <2.0.0-0', hasData: false }
+91 silly addNameRange { name: 'react', range: '>=0.14.1-0 <0.15.0-0', hasData: false }
+92 verbose addRemoteGit [ 'git://github.com/twbs/bootstrap.git', 'v4-dev' ]
+93 verbose cache add name="gulp" spec="^3.9.0" args=["gulp","^3.9.0"]
+94 verbose parsed url { protocol: null,
+94 verbose parsed url   slashes: null,
+94 verbose parsed url   auth: null,
+94 verbose parsed url   host: null,
+94 verbose parsed url   port: null,
+94 verbose parsed url   hostname: null,
+94 verbose parsed url   hash: null,
+94 verbose parsed url   search: null,
+94 verbose parsed url   query: null,
+94 verbose parsed url   pathname: '^3.9.0',
+94 verbose parsed url   path: '^3.9.0',
+94 verbose parsed url   href: '^3.9.0' }
+95 verbose addNamed [ 'gulp', '^3.9.0' ]
+96 verbose addNamed [ null, '>=3.9.0-0 <4.0.0-0' ]
+97 silly lockFile a7ccee77-gulp-3-9-0 gulp@^3.9.0
+98 verbose lock gulp@^3.9.0 /Users/ben/.npm/a7ccee77-gulp-3-9-0.lock
+99 verbose cache add name="gulp-sass" spec="^2.1.0" args=["gulp-sass","^2.1.0"]
+100 verbose parsed url { protocol: null,
+100 verbose parsed url   slashes: null,
+100 verbose parsed url   auth: null,
+100 verbose parsed url   host: null,
+100 verbose parsed url   port: null,
+100 verbose parsed url   hostname: null,
+100 verbose parsed url   hash: null,
+100 verbose parsed url   search: null,
+100 verbose parsed url   query: null,
+100 verbose parsed url   pathname: '^2.1.0',
+100 verbose parsed url   path: '^2.1.0',
+100 verbose parsed url   href: '^2.1.0' }
+101 verbose addNamed [ 'gulp-sass', '^2.1.0' ]
+102 verbose addNamed [ null, '>=2.1.0-0 <3.0.0-0' ]
+103 silly lockFile 5e2744dd-gulp-sass-2-1-0 gulp-sass@^2.1.0
+104 verbose lock gulp-sass@^2.1.0 /Users/ben/.npm/5e2744dd-gulp-sass-2-1-0.lock
+105 verbose cache add name="gulp-sourcemaps" spec="^1.6.0" args=["gulp-sourcemaps","^1.6.0"]
+106 verbose parsed url { protocol: null,
+106 verbose parsed url   slashes: null,
+106 verbose parsed url   auth: null,
+106 verbose parsed url   host: null,
+106 verbose parsed url   port: null,
+106 verbose parsed url   hostname: null,
+106 verbose parsed url   hash: null,
+106 verbose parsed url   search: null,
+106 verbose parsed url   query: null,
+106 verbose parsed url   pathname: '^1.6.0',
+106 verbose parsed url   path: '^1.6.0',
+106 verbose parsed url   href: '^1.6.0' }
+107 verbose addNamed [ 'gulp-sourcemaps', '^1.6.0' ]
+108 verbose addNamed [ null, '>=1.6.0-0 <2.0.0-0' ]
+109 silly lockFile c55741cd-gulp-sourcemaps-1-6-0 gulp-sourcemaps@^1.6.0
+110 verbose lock gulp-sourcemaps@^1.6.0 /Users/ben/.npm/c55741cd-gulp-sourcemaps-1-6-0.lock
+111 verbose cache add [ 'watchify@^3.6.0', null ]
+112 verbose cache add name=undefined spec="watchify@^3.6.0" args=["watchify@^3.6.0",null]
+113 verbose parsed url { protocol: null,
+113 verbose parsed url   slashes: null,
+113 verbose parsed url   auth: null,
+113 verbose parsed url   host: null,
+113 verbose parsed url   port: null,
+113 verbose parsed url   hostname: null,
+113 verbose parsed url   hash: null,
+113 verbose parsed url   search: null,
+113 verbose parsed url   query: null,
+113 verbose parsed url   pathname: 'watchify@^3.6.0',
+113 verbose parsed url   path: 'watchify@^3.6.0',
+113 verbose parsed url   href: 'watchify@^3.6.0' }
+114 verbose cache add [ 'backbone@^1.2.3', null ]
+115 verbose cache add name=undefined spec="backbone@^1.2.3" args=["backbone@^1.2.3",null]
+116 verbose parsed url { protocol: null,
+116 verbose parsed url   slashes: null,
+116 verbose parsed url   auth: null,
+116 verbose parsed url   host: null,
+116 verbose parsed url   port: null,
+116 verbose parsed url   hostname: null,
+116 verbose parsed url   hash: null,
+116 verbose parsed url   search: null,
+116 verbose parsed url   query: null,
+116 verbose parsed url   pathname: 'backbone@^1.2.3',
+116 verbose parsed url   path: 'backbone@^1.2.3',
+116 verbose parsed url   href: 'backbone@^1.2.3' }
+117 verbose cache add name="vinyl-source-stream" spec="^1.1.0" args=["vinyl-source-stream","^1.1.0"]
+118 verbose parsed url { protocol: null,
+118 verbose parsed url   slashes: null,
+118 verbose parsed url   auth: null,
+118 verbose parsed url   host: null,
+118 verbose parsed url   port: null,
+118 verbose parsed url   hostname: null,
+118 verbose parsed url   hash: null,
+118 verbose parsed url   search: null,
+118 verbose parsed url   query: null,
+118 verbose parsed url   pathname: '^1.1.0',
+118 verbose parsed url   path: '^1.1.0',
+118 verbose parsed url   href: '^1.1.0' }
+119 verbose addNamed [ 'vinyl-source-stream', '^1.1.0' ]
+120 verbose addNamed [ null, '>=1.1.0-0 <2.0.0-0' ]
+121 silly lockFile cc5803ce-vinyl-source-stream-1-1-0 vinyl-source-stream@^1.1.0
+122 verbose lock vinyl-source-stream@^1.1.0 /Users/ben/.npm/cc5803ce-vinyl-source-stream-1-1-0.lock
+123 silly addNameRange { name: 'react-dom',
+123 silly addNameRange   range: '>=0.14.1-0 <0.15.0-0',
+123 silly addNameRange   hasData: false }
+124 silly addNameRange { name: 'react-router',
+124 silly addNameRange   range: '>=1.0.0-rc3 <2.0.0-0',
+124 silly addNameRange   hasData: false }
+125 silly addNameRange { name: 'babelify', range: '>=6.4.0-0 <7.0.0-0', hasData: false }
+126 verbose request where is /history
+127 verbose request registry https://registry.npmjs.org/
+128 verbose request id e702b34b2635997c
+129 verbose url raw /history
+130 verbose url resolving [ 'https://registry.npmjs.org/', './history' ]
+131 verbose url resolved https://registry.npmjs.org/history
+132 verbose request where is https://registry.npmjs.org/history
+133 info trying registry request attempt 1 at 21:08:41
+134 http GET https://registry.npmjs.org/history
+135 silly addNameRange { name: 'browser-sync',
+135 silly addNameRange   range: '>=2.9.11-0 <3.0.0-0',
+135 silly addNameRange   hasData: false }
+136 verbose cache add name="watchify" spec="^3.6.0" args=["watchify","^3.6.0"]
+137 verbose parsed url { protocol: null,
+137 verbose parsed url   slashes: null,
+137 verbose parsed url   auth: null,
+137 verbose parsed url   host: null,
+137 verbose parsed url   port: null,
+137 verbose parsed url   hostname: null,
+137 verbose parsed url   hash: null,
+137 verbose parsed url   search: null,
+137 verbose parsed url   query: null,
+137 verbose parsed url   pathname: '^3.6.0',
+137 verbose parsed url   path: '^3.6.0',
+137 verbose parsed url   href: '^3.6.0' }
+138 verbose addNamed [ 'watchify', '^3.6.0' ]
+139 verbose addNamed [ null, '>=3.6.0-0 <4.0.0-0' ]
+140 silly lockFile c7872213-watchify-3-6-0 watchify@^3.6.0
+141 verbose lock watchify@^3.6.0 /Users/ben/.npm/c7872213-watchify-3-6-0.lock
+142 verbose cache add name="backbone" spec="^1.2.3" args=["backbone","^1.2.3"]
+143 verbose parsed url { protocol: null,
+143 verbose parsed url   slashes: null,
+143 verbose parsed url   auth: null,
+143 verbose parsed url   host: null,
+143 verbose parsed url   port: null,
+143 verbose parsed url   hostname: null,
+143 verbose parsed url   hash: null,
+143 verbose parsed url   search: null,
+143 verbose parsed url   query: null,
+143 verbose parsed url   pathname: '^1.2.3',
+143 verbose parsed url   path: '^1.2.3',
+143 verbose parsed url   href: '^1.2.3' }
+144 verbose addNamed [ 'backbone', '^1.2.3' ]
+145 verbose addNamed [ null, '>=1.2.3-0 <2.0.0-0' ]
+146 silly lockFile 5acc2495-backbone-1-2-3 backbone@^1.2.3
+147 verbose lock backbone@^1.2.3 /Users/ben/.npm/5acc2495-backbone-1-2-3.lock
+148 verbose request where is /react-dom
+149 verbose request registry https://registry.npmjs.org/
+150 verbose url raw /react-dom
+151 verbose url resolving [ 'https://registry.npmjs.org/', './react-dom' ]
+152 verbose url resolved https://registry.npmjs.org/react-dom
+153 verbose request where is https://registry.npmjs.org/react-dom
+154 info trying registry request attempt 1 at 21:08:41
+155 http GET https://registry.npmjs.org/react-dom
+156 silly addNameRange { name: 'browserify',
+156 silly addNameRange   range: '>=12.0.1-0 <13.0.0-0',
+156 silly addNameRange   hasData: false }
+157 verbose request where is /react-router
+158 verbose request registry https://registry.npmjs.org/
+159 verbose url raw /react-router
+160 verbose url resolving [ 'https://registry.npmjs.org/', './react-router' ]
+161 verbose url resolved https://registry.npmjs.org/react-router
+162 verbose request where is https://registry.npmjs.org/react-router
+163 info trying registry request attempt 1 at 21:08:41
+164 http GET https://registry.npmjs.org/react-router
+165 verbose request where is /babelify
+166 verbose request registry https://registry.npmjs.org/
+167 verbose url raw /babelify
+168 verbose url resolving [ 'https://registry.npmjs.org/', './babelify' ]
+169 verbose url resolved https://registry.npmjs.org/babelify
+170 verbose request where is https://registry.npmjs.org/babelify
+171 info trying registry request attempt 1 at 21:08:41
+172 http GET https://registry.npmjs.org/babelify
+173 verbose request where is /browser-sync
+174 verbose request registry https://registry.npmjs.org/
+175 verbose url raw /browser-sync
+176 verbose url resolving [ 'https://registry.npmjs.org/', './browser-sync' ]
+177 verbose url resolved https://registry.npmjs.org/browser-sync
+178 verbose request where is https://registry.npmjs.org/browser-sync
+179 info trying registry request attempt 1 at 21:08:41
+180 http GET https://registry.npmjs.org/browser-sync
+181 silly addNameRange { name: 'gulp', range: '>=3.9.0-0 <4.0.0-0', hasData: false }
+182 silly addNameRange { name: 'gulp-sass',
+182 silly addNameRange   range: '>=2.1.0-0 <3.0.0-0',
+182 silly addNameRange   hasData: false }
+183 silly addNameRange { name: 'gulp-sourcemaps',
+183 silly addNameRange   range: '>=1.6.0-0 <2.0.0-0',
+183 silly addNameRange   hasData: false }
+184 silly addNameRange { name: 'vinyl-source-stream',
+184 silly addNameRange   range: '>=1.1.0-0 <2.0.0-0',
+184 silly addNameRange   hasData: false }
+185 silly addNameRange { name: 'watchify', range: '>=3.6.0-0 <4.0.0-0', hasData: false }
+186 silly addNameRange { name: 'backbone', range: '>=1.2.3-0 <2.0.0-0', hasData: false }
+187 silly lockFile a03500bb-it-github-com-twbs-bootstrap-git git://github.com/twbs/bootstrap.git
+188 silly lockFile a03500bb-it-github-com-twbs-bootstrap-git git://github.com/twbs/bootstrap.git
+189 verbose request where is /react
+190 verbose request registry https://registry.npmjs.org/
+191 verbose url raw /react
+192 verbose url resolving [ 'https://registry.npmjs.org/', './react' ]
+193 verbose url resolved https://registry.npmjs.org/react
+194 verbose request where is https://registry.npmjs.org/react
+195 info trying registry request attempt 1 at 21:08:41
+196 verbose etag "9XDHQIHGYFBEZWBE7F30NJL5H"
+197 http GET https://registry.npmjs.org/react
+198 verbose request where is /gulp-sourcemaps
+199 verbose request registry https://registry.npmjs.org/
+200 verbose url raw /gulp-sourcemaps
+201 verbose url resolving [ 'https://registry.npmjs.org/', './gulp-sourcemaps' ]
+202 verbose url resolved https://registry.npmjs.org/gulp-sourcemaps
+203 verbose request where is https://registry.npmjs.org/gulp-sourcemaps
+204 info trying registry request attempt 1 at 21:08:41
+205 verbose etag "2RRDP9H4DWACBHESQ56AHSAFV"
+206 http GET https://registry.npmjs.org/gulp-sourcemaps
+207 verbose request where is /gulp-sass
+208 verbose request registry https://registry.npmjs.org/
+209 verbose url raw /gulp-sass
+210 verbose url resolving [ 'https://registry.npmjs.org/', './gulp-sass' ]
+211 verbose url resolved https://registry.npmjs.org/gulp-sass
+212 verbose request where is https://registry.npmjs.org/gulp-sass
+213 info trying registry request attempt 1 at 21:08:41
+214 verbose etag "3D8YTRASE8MVGIKJOHLKEML3X"
+215 http GET https://registry.npmjs.org/gulp-sass
+216 verbose request where is /vinyl-source-stream
+217 verbose request registry https://registry.npmjs.org/
+218 verbose url raw /vinyl-source-stream
+219 verbose url resolving [ 'https://registry.npmjs.org/', './vinyl-source-stream' ]
+220 verbose url resolved https://registry.npmjs.org/vinyl-source-stream
+221 verbose request where is https://registry.npmjs.org/vinyl-source-stream
+222 info trying registry request attempt 1 at 21:08:41
+223 verbose etag "A0EX3Z2P2KJY7G08UD3HWAKZ0"
+224 http GET https://registry.npmjs.org/vinyl-source-stream
+225 verbose request where is /gulp
+226 verbose request registry https://registry.npmjs.org/
+227 verbose url raw /gulp
+228 verbose url resolving [ 'https://registry.npmjs.org/', './gulp' ]
+229 verbose url resolved https://registry.npmjs.org/gulp
+230 verbose request where is https://registry.npmjs.org/gulp
+231 info trying registry request attempt 1 at 21:08:41
+232 verbose etag "EXF4W3SHPRUW8MSFEB6ZQKJJ2"
+233 http GET https://registry.npmjs.org/gulp
+234 verbose request where is /browserify
+235 verbose request registry https://registry.npmjs.org/
+236 verbose url raw /browserify
+237 verbose url resolving [ 'https://registry.npmjs.org/', './browserify' ]
+238 verbose url resolved https://registry.npmjs.org/browserify
+239 verbose request where is https://registry.npmjs.org/browserify
+240 info trying registry request attempt 1 at 21:08:42
+241 verbose etag "7DEKGGGEF1MDN686LYF8PN7S3"
+242 http GET https://registry.npmjs.org/browserify
+243 verbose request where is /backbone
+244 verbose request registry https://registry.npmjs.org/
+245 verbose url raw /backbone
+246 verbose url resolving [ 'https://registry.npmjs.org/', './backbone' ]
+247 verbose url resolved https://registry.npmjs.org/backbone
+248 verbose request where is https://registry.npmjs.org/backbone
+249 info trying registry request attempt 1 at 21:08:42
+250 verbose etag "42VWTS1ZCA9689UZANIBT2N7Z"
+251 http GET https://registry.npmjs.org/backbone
+252 verbose request where is /watchify
+253 verbose request registry https://registry.npmjs.org/
+254 verbose url raw /watchify
+255 verbose url resolving [ 'https://registry.npmjs.org/', './watchify' ]
+256 verbose url resolved https://registry.npmjs.org/watchify
+257 verbose request where is https://registry.npmjs.org/watchify
+258 info trying registry request attempt 1 at 21:08:42
+259 verbose etag "AT3T2H93Y0YEI6ACU6320BC5D"
+260 http GET https://registry.npmjs.org/watchify
+261 http 200 https://registry.npmjs.org/react-dom
+262 silly registry.get cb [ 200,
+262 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+262 silly registry.get     etag: '"6U8OU6TJ97LKU6WMQ2SKHDMHZ"',
+262 silly registry.get     'content-type': 'application/json',
+262 silly registry.get     'cache-control': 'max-age=60',
+262 silly registry.get     'content-length': '10339',
+262 silly registry.get     'accept-ranges': 'bytes',
+262 silly registry.get     date: 'Sun, 08 Nov 2015 02:08:42 GMT',
+262 silly registry.get     via: '1.1 varnish',
+262 silly registry.get     age: '55',
+262 silly registry.get     connection: 'keep-alive',
+262 silly registry.get     'x-served-by': 'cache-iad2131-IAD',
+262 silly registry.get     'x-cache': 'HIT',
+262 silly registry.get     'x-cache-hits': '1',
+262 silly registry.get     'x-timer': 'S1446948522.187213,VS0,VE0',
+262 silly registry.get     vary: 'Accept' } ]
+263 silly addNameRange number 2 { name: 'react-dom',
+263 silly addNameRange   range: '>=0.14.1-0 <0.15.0-0',
+263 silly addNameRange   hasData: true }
+264 silly addNameRange versions [ 'react-dom',
+264 silly addNameRange   [ '0.1.0',
+264 silly addNameRange     '0.14.0-beta1',
+264 silly addNameRange     '0.14.0-beta2',
+264 silly addNameRange     '0.14.0-beta3',
+264 silly addNameRange     '0.14.0-rc1',
+264 silly addNameRange     '0.14.0',
+264 silly addNameRange     '0.14.1',
+264 silly addNameRange     '0.14.2' ] ]
+265 verbose addNamed [ 'react-dom', '0.14.2' ]
+266 verbose addNamed [ '0.14.2', '0.14.2' ]
+267 silly lockFile efdab5a6-react-dom-0-14-2 react-dom@0.14.2
+268 verbose lock react-dom@0.14.2 /Users/ben/.npm/efdab5a6-react-dom-0-14-2.lock
+269 silly lockFile 37fdf8df-g-react-dom-react-dom-0-14-2-tgz https://registry.npmjs.org/react-dom/-/react-dom-0.14.2.tgz
+270 verbose lock https://registry.npmjs.org/react-dom/-/react-dom-0.14.2.tgz /Users/ben/.npm/37fdf8df-g-react-dom-react-dom-0-14-2-tgz.lock
+271 verbose addRemoteTarball [ 'https://registry.npmjs.org/react-dom/-/react-dom-0.14.2.tgz',
+271 verbose addRemoteTarball   'ba979850dca2513f99cf9fb3fb574ad9de3dab84' ]
+272 info retry fetch attempt 1 at 21:08:42
+273 verbose fetch to= /var/folders/v9/450sq__16x7023ybxly016hr0000gn/T/npm-9636-h0i_XzTI/registry.npmjs.org/react-dom/-/react-dom-0.14.2.tgz
+274 http GET https://registry.npmjs.org/react-dom/-/react-dom-0.14.2.tgz
+275 http 200 https://registry.npmjs.org/history
+276 silly registry.get cb [ 200,
+276 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+276 silly registry.get     etag: '"8URIMBHDJHK7PFA5RFBN8KXDD"',
+276 silly registry.get     'content-type': 'application/json',
+276 silly registry.get     'cache-control': 'max-age=60',
+276 silly registry.get     'content-length': '72554',
+276 silly registry.get     'accept-ranges': 'bytes',
+276 silly registry.get     date: 'Sun, 08 Nov 2015 02:08:42 GMT',
+276 silly registry.get     via: '1.1 varnish',
+276 silly registry.get     age: '55',
+276 silly registry.get     connection: 'keep-alive',
+276 silly registry.get     'x-served-by': 'cache-iad2142-IAD',
+276 silly registry.get     'x-cache': 'HIT',
+276 silly registry.get     'x-cache-hits': '1',
+276 silly registry.get     'x-timer': 'S1446948522.182703,VS0,VE0',
+276 silly registry.get     vary: 'Accept' } ]
+277 http 200 https://registry.npmjs.org/react-router
+278 silly registry.get cb [ 200,
+278 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+278 silly registry.get     etag: '"1AV47GW02GC5SDJ9H3RT0SIAD"',
+278 silly registry.get     'content-type': 'application/json',
+278 silly registry.get     'cache-control': 'max-age=60',
+278 silly registry.get     'content-length': '90252',
+278 silly registry.get     'accept-ranges': 'bytes',
+278 silly registry.get     date: 'Sun, 08 Nov 2015 02:08:42 GMT',
+278 silly registry.get     via: '1.1 varnish',
+278 silly registry.get     age: '55',
+278 silly registry.get     connection: 'keep-alive',
+278 silly registry.get     'x-served-by': 'cache-iad2146-IAD',
+278 silly registry.get     'x-cache': 'HIT',
+278 silly registry.get     'x-cache-hits': '1',
+278 silly registry.get     'x-timer': 'S1446948522.186337,VS0,VE0',
+278 silly registry.get     vary: 'Accept' } ]
+279 http 200 https://registry.npmjs.org/react
+280 silly registry.get cb [ 200,
+280 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+280 silly registry.get     etag: '"F57LUKWTEAY6RTC5ZLMUJXBLA"',
+280 silly registry.get     'content-type': 'application/json',
+280 silly registry.get     'cache-control': 'max-age=60',
+280 silly registry.get     'content-length': '72770',
+280 silly registry.get     'accept-ranges': 'bytes',
+280 silly registry.get     date: 'Sun, 08 Nov 2015 02:08:42 GMT',
+280 silly registry.get     via: '1.1 varnish',
+280 silly registry.get     age: '55',
+280 silly registry.get     connection: 'keep-alive',
+280 silly registry.get     'x-served-by': 'cache-iad2131-IAD',
+280 silly registry.get     'x-cache': 'HIT',
+280 silly registry.get     'x-cache-hits': '1',
+280 silly registry.get     'x-timer': 'S1446948522.226897,VS0,VE6',
+280 silly registry.get     vary: 'Accept' } ]
+281 silly addNameRange number 2 { name: 'history', range: '>=1.13.0-0 <2.0.0-0', hasData: true }
+282 silly addNameRange versions [ 'history',
+282 silly addNameRange   [ '0.1.0',
+282 silly addNameRange     '1.0.0',
+282 silly addNameRange     '1.1.0',
+282 silly addNameRange     '1.2.0',
+282 silly addNameRange     '1.2.1',
+282 silly addNameRange     '1.2.2',
+282 silly addNameRange     '1.3.0',
+282 silly addNameRange     '1.3.1',
+282 silly addNameRange     '1.3.2',
+282 silly addNameRange     '1.3.3',
+282 silly addNameRange     '1.4.0',
+282 silly addNameRange     '1.4.1',
+282 silly addNameRange     '1.5.0',
+282 silly addNameRange     '1.6.0',
+282 silly addNameRange     '1.7.0',
+282 silly addNameRange     '1.8.0',
+282 silly addNameRange     '1.8.1',
+282 silly addNameRange     '1.8.2',
+282 silly addNameRange     '1.8.3',
+282 silly addNameRange     '1.8.4',
+282 silly addNameRange     '1.8.5',
+282 silly addNameRange     '1.9.0',
+282 silly addNameRange     '1.9.1',
+282 silly addNameRange     '1.10.0',
+282 silly addNameRange     '1.10.1',
+282 silly addNameRange     '1.10.2',
+282 silly addNameRange     '1.11.0',
+282 silly addNameRange     '1.11.1',
+282 silly addNameRange     '1.12.0',
+282 silly addNameRange     '1.12.1',
+282 silly addNameRange     '1.12.2',
+282 silly addNameRange     '1.12.3',
+282 silly addNameRange     '1.12.4',
+282 silly addNameRange     '1.12.5',
+282 silly addNameRange     '1.12.6',
+282 silly addNameRange     '1.13.0' ] ]
+283 verbose addNamed [ 'history', '1.13.0' ]
+284 verbose addNamed [ '1.13.0', '1.13.0' ]
+285 silly lockFile b4b9dd75-history-1-13-0 history@1.13.0
+286 verbose lock history@1.13.0 /Users/ben/.npm/b4b9dd75-history-1-13-0.lock
+287 silly addNameRange number 2 { name: 'react-router',
+287 silly addNameRange   range: '>=1.0.0-rc3 <2.0.0-0',
+287 silly addNameRange   hasData: true }
+288 silly addNameRange versions [ 'react-router',
+288 silly addNameRange   [ '0.0.0',
+288 silly addNameRange     '0.0.1',
+288 silly addNameRange     '0.4.0',
+288 silly addNameRange     '0.4.1',
+288 silly addNameRange     '0.4.2',
+288 silly addNameRange     '0.5.0',
+288 silly addNameRange     '0.5.1',
+288 silly addNameRange     '0.5.2',
+288 silly addNameRange     '0.5.3',
+288 silly addNameRange     '0.6.0',
+288 silly addNameRange     '0.6.1',
+288 silly addNameRange     '0.7.0',
+288 silly addNameRange     '0.8.0',
+288 silly addNameRange     '0.9.0',
+288 silly addNameRange     '0.9.1',
+288 silly addNameRange     '0.9.2',
+288 silly addNameRange     '0.9.3',
+288 silly addNameRange     '0.9.4',
+288 silly addNameRange     '0.9.5',
+288 silly addNameRange     '0.10.0',
+288 silly addNameRange     '0.10.1',
+288 silly addNameRange     '0.10.2',
+288 silly addNameRange     '0.11.0',
+288 silly addNameRange     '0.11.1',
+288 silly addNameRange     '0.11.2',
+288 silly addNameRange     '0.11.3',
+288 silly addNameRange     '0.11.4',
+288 silly addNameRange     '0.11.5',
+288 silly addNameRange     '0.11.6',
+288 silly addNameRange     '0.12.0',
+288 silly addNameRange     '0.12.1',
+288 silly addNameRange     '0.12.2',
+288 silly addNameRange     '0.12.3',
+288 silly addNameRange     '0.12.4',
+288 silly addNameRange     '0.13.0',
+288 silly addNameRange     '0.13.1',
+288 silly addNameRange     '0.13.2',
+288 silly addNameRange     '0.13.3',
+288 silly addNameRange     '1.0.0-alpha1',
+288 silly addNameRange     '1.0.0-alpha2',
+288 silly addNameRange     '1.0.0-beta1',
+288 silly addNameRange     '1.0.0-beta2',
+288 silly addNameRange     '1.0.0-beta3',
+288 silly addNameRange     '1.0.0-beta4',
+288 silly addNameRange     '1.0.0-rc1',
+288 silly addNameRange     '0.13.4',
+288 silly addNameRange     '1.0.0-rc2',
+288 silly addNameRange     '1.0.0-rc3',
+288 silly addNameRange     '0.13.5',
+288 silly addNameRange     '1.0.0-rc4' ] ]
+289 verbose addNamed [ 'react-router', '1.0.0-rc4' ]
+290 verbose addNamed [ '1.0.0-rc4', '1.0.0-rc4' ]
+291 silly lockFile 4193a916-react-router-1-0-0-rc4 react-router@1.0.0-rc4
+292 verbose lock react-router@1.0.0-rc4 /Users/ben/.npm/4193a916-react-router-1-0-0-rc4.lock
+293 silly addNameRange number 2 { name: 'react', range: '>=0.14.1-0 <0.15.0-0', hasData: true }
+294 silly addNameRange versions [ 'react',
+294 silly addNameRange   [ '0.0.1',
+294 silly addNameRange     '0.0.2',
+294 silly addNameRange     '0.0.3',
+294 silly addNameRange     '0.1.2',
+294 silly addNameRange     '0.2.0',
+294 silly addNameRange     '0.2.1',
+294 silly addNameRange     '0.2.2',
+294 silly addNameRange     '0.2.3',
+294 silly addNameRange     '0.2.4',
+294 silly addNameRange     '0.2.5',
+294 silly addNameRange     '0.2.6',
+294 silly addNameRange     '0.3.0',
+294 silly addNameRange     '0.3.4',
+294 silly addNameRange     '0.3.5',
+294 silly addNameRange     '0.5.0',
+294 silly addNameRange     '0.5.1',
+294 silly addNameRange     '0.5.2',
+294 silly addNameRange     '0.6.0',
+294 silly addNameRange     '0.6.1',
+294 silly addNameRange     '0.6.2',
+294 silly addNameRange     '0.6.3',
+294 silly addNameRange     '0.7.0',
+294 silly addNameRange     '0.7.1',
+294 silly addNameRange     '0.8.0',
+294 silly addNameRange     '0.9.0-rc1',
+294 silly addNameRange     '0.9.0',
+294 silly addNameRange     '0.10.0-rc1',
+294 silly addNameRange     '0.10.0',
+294 silly addNameRange     '0.11.0-rc1',
+294 silly addNameRange     '0.11.0',
+294 silly addNameRange     '0.11.1',
+294 silly addNameRange     '0.11.2',
+294 silly addNameRange     '0.12.0-rc1',
+294 silly addNameRange     '0.12.0',
+294 silly addNameRange     '0.12.1',
+294 silly addNameRange     '0.12.2',
+294 silly addNameRange     '0.13.0-alpha.1',
+294 silly addNameRange     '0.13.0-alpha.2',
+294 silly addNameRange     '0.13.0-beta.1',
+294 silly addNameRange     '0.13.0-beta.2',
+294 silly addNameRange     '0.13.0-rc1',
+294 silly addNameRange     '0.13.0-rc2',
+294 silly addNameRange     '0.13.0',
+294 silly addNameRange     '0.13.1',
+294 silly addNameRange     '0.13.2',
+294 silly addNameRange     '0.13.3',
+294 silly addNameRange     '0.14.0-alpha1',
+294 silly addNameRange     '0.14.0-alpha2',
+294 silly addNameRange     '0.14.0-alpha3',
+294 silly addNameRange     '0.14.0-beta1',
+294 silly addNameRange     '0.14.0-beta2',
+294 silly addNameRange     '0.14.0-beta3',
+294 silly addNameRange     '0.14.0-rc1',
+294 silly addNameRange     '0.14.0',
+294 silly addNameRange     '0.14.1',
+294 silly addNameRange     '0.14.2' ] ]
+295 verbose addNamed [ 'react', '0.14.2' ]
+296 verbose addNamed [ '0.14.2', '0.14.2' ]
+297 silly lockFile 1d6440e1-react-0-14-2 react@0.14.2
+298 verbose lock react@0.14.2 /Users/ben/.npm/1d6440e1-react-0-14-2.lock
+299 silly lockFile 01896074-outer-react-router-1-0-0-rc4-tgz https://registry.npmjs.org/react-router/-/react-router-1.0.0-rc4.tgz
+300 verbose lock https://registry.npmjs.org/react-router/-/react-router-1.0.0-rc4.tgz /Users/ben/.npm/01896074-outer-react-router-1-0-0-rc4-tgz.lock
+301 silly lockFile 8a872405-s-org-history-history-1-13-0-tgz https://registry.npmjs.org/history/-/history-1.13.0.tgz
+302 verbose lock https://registry.npmjs.org/history/-/history-1.13.0.tgz /Users/ben/.npm/8a872405-s-org-history-history-1-13-0-tgz.lock
+303 silly lockFile 29186be1-npmjs-org-react-react-0-14-2-tgz https://registry.npmjs.org/react/-/react-0.14.2.tgz
+304 verbose lock https://registry.npmjs.org/react/-/react-0.14.2.tgz /Users/ben/.npm/29186be1-npmjs-org-react-react-0-14-2-tgz.lock
+305 verbose addRemoteTarball [ 'https://registry.npmjs.org/react-router/-/react-router-1.0.0-rc4.tgz',
+305 verbose addRemoteTarball   '710e834835662b34949172a5c7d2038f5f246749' ]
+306 verbose addRemoteTarball [ 'https://registry.npmjs.org/history/-/history-1.13.0.tgz',
+306 verbose addRemoteTarball   'ff75e23680d9f7962c5eb1e159a36d22ae87f4aa' ]
+307 verbose addRemoteTarball [ 'https://registry.npmjs.org/react/-/react-0.14.2.tgz',
+307 verbose addRemoteTarball   '694d3eabdfde56ec2ba1b4db7d160c9a6fe9ce6a' ]
+308 info retry fetch attempt 1 at 21:08:42
+309 verbose fetch to= /var/folders/v9/450sq__16x7023ybxly016hr0000gn/T/npm-9636-h0i_XzTI/registry.npmjs.org/react-router/-/react-router-1.0.0-rc4.tgz
+310 info retry fetch attempt 1 at 21:08:42
+311 verbose fetch to= /var/folders/v9/450sq__16x7023ybxly016hr0000gn/T/npm-9636-h0i_XzTI/registry.npmjs.org/history/-/history-1.13.0.tgz
+312 info retry fetch attempt 1 at 21:08:42
+313 verbose fetch to= /var/folders/v9/450sq__16x7023ybxly016hr0000gn/T/npm-9636-h0i_XzTI/registry.npmjs.org/react/-/react-0.14.2.tgz
+314 http GET https://registry.npmjs.org/react-router/-/react-router-1.0.0-rc4.tgz
+315 http GET https://registry.npmjs.org/history/-/history-1.13.0.tgz
+316 http GET https://registry.npmjs.org/react/-/react-0.14.2.tgz
+317 http 200 https://registry.npmjs.org/gulp-sourcemaps
+318 silly registry.get cb [ 200,
+318 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+318 silly registry.get     etag: '"98BK96EN7Q0QM2KO54SD2IOPV"',
+318 silly registry.get     'content-type': 'application/json',
+318 silly registry.get     'cache-control': 'max-age=60',
+318 silly registry.get     'content-length': '57933',
+318 silly registry.get     'accept-ranges': 'bytes',
+318 silly registry.get     date: 'Sun, 08 Nov 2015 02:08:42 GMT',
+318 silly registry.get     via: '1.1 varnish',
+318 silly registry.get     age: '0',
+318 silly registry.get     connection: 'keep-alive',
+318 silly registry.get     'x-served-by': 'cache-iad2142-IAD',
+318 silly registry.get     'x-cache': 'HIT',
+318 silly registry.get     'x-cache-hits': '1',
+318 silly registry.get     'x-timer': 'S1446948522.276620,VS0,VE13',
+318 silly registry.get     vary: 'Accept' } ]
+319 silly addNameRange number 2 { name: 'gulp-sourcemaps',
+319 silly addNameRange   range: '>=1.6.0-0 <2.0.0-0',
+319 silly addNameRange   hasData: true }
+320 silly addNameRange versions [ 'gulp-sourcemaps',
+320 silly addNameRange   [ '0.2.0',
+320 silly addNameRange     '0.2.1',
+320 silly addNameRange     '0.3.0',
+320 silly addNameRange     '0.3.1',
+320 silly addNameRange     '0.4.0',
+320 silly addNameRange     '0.4.1',
+320 silly addNameRange     '0.4.2',
+320 silly addNameRange     '0.4.3',
+320 silly addNameRange     '0.4.4',
+320 silly addNameRange     '0.4.5',
+320 silly addNameRange     '0.4.6',
+320 silly addNameRange     '1.0.0',
+320 silly addNameRange     '1.1.0',
+320 silly addNameRange     '1.1.1',
+320 silly addNameRange     '1.1.2',
+320 silly addNameRange     '1.1.3',
+320 silly addNameRange     '1.1.4',
+320 silly addNameRange     '1.1.5',
+320 silly addNameRange     '1.2.0',
+320 silly addNameRange     '1.2.1',
+320 silly addNameRange     '1.2.2',
+320 silly addNameRange     '1.2.3',
+320 silly addNameRange     '1.2.4',
+320 silly addNameRange     '1.2.5',
+320 silly addNameRange     '1.2.6',
+320 silly addNameRange     '1.2.7',
+320 silly addNameRange     '1.2.8',
+320 silly addNameRange     '1.3.0',
+320 silly addNameRange     '1.4.0',
+320 silly addNameRange     '1.5.0',
+320 silly addNameRange     '1.5.1',
+320 silly addNameRange     '1.5.2',
+320 silly addNameRange     '1.6.0' ] ]
+321 verbose addNamed [ 'gulp-sourcemaps', '1.6.0' ]
+322 verbose addNamed [ '1.6.0', '1.6.0' ]
+323 silly lockFile d4931dcb-gulp-sourcemaps-1-6-0 gulp-sourcemaps@1.6.0
+324 verbose lock gulp-sourcemaps@1.6.0 /Users/ben/.npm/d4931dcb-gulp-sourcemaps-1-6-0.lock
+325 silly lockFile bfdfc8a9-cemaps-gulp-sourcemaps-1-6-0-tgz https://registry.npmjs.org/gulp-sourcemaps/-/gulp-sourcemaps-1.6.0.tgz
+326 verbose lock https://registry.npmjs.org/gulp-sourcemaps/-/gulp-sourcemaps-1.6.0.tgz /Users/ben/.npm/bfdfc8a9-cemaps-gulp-sourcemaps-1-6-0-tgz.lock
+327 verbose addRemoteTarball [ 'https://registry.npmjs.org/gulp-sourcemaps/-/gulp-sourcemaps-1.6.0.tgz',
+327 verbose addRemoteTarball   'b86ff349d801ceb56e1d9e7dc7bbcb4b7dee600c' ]
+328 info retry fetch attempt 1 at 21:08:42
+329 verbose fetch to= /var/folders/v9/450sq__16x7023ybxly016hr0000gn/T/npm-9636-h0i_XzTI/registry.npmjs.org/gulp-sourcemaps/-/gulp-sourcemaps-1.6.0.tgz
+330 http GET https://registry.npmjs.org/gulp-sourcemaps/-/gulp-sourcemaps-1.6.0.tgz
+331 http 200 https://registry.npmjs.org/react-dom/-/react-dom-0.14.2.tgz
+332 silly lockFile 37fdf8df-g-react-dom-react-dom-0-14-2-tgz https://registry.npmjs.org/react-dom/-/react-dom-0.14.2.tgz
+333 silly lockFile 37fdf8df-g-react-dom-react-dom-0-14-2-tgz https://registry.npmjs.org/react-dom/-/react-dom-0.14.2.tgz
+334 silly lockFile efdab5a6-react-dom-0-14-2 react-dom@0.14.2
+335 silly lockFile efdab5a6-react-dom-0-14-2 react-dom@0.14.2
+336 silly lockFile baa95e4c-react-dom-0-14-1 react-dom@^0.14.1
+337 silly lockFile baa95e4c-react-dom-0-14-1 react-dom@^0.14.1
+338 http 200 https://registry.npmjs.org/gulp-sass
+339 silly registry.get cb [ 200,
+339 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+339 silly registry.get     etag: '"8JQP5WCTEN97XQ7YD7NF8UR83"',
+339 silly registry.get     'content-type': 'application/json',
+339 silly registry.get     'cache-control': 'max-age=60',
+339 silly registry.get     'content-length': '43123',
+339 silly registry.get     'accept-ranges': 'bytes',
+339 silly registry.get     date: 'Sun, 08 Nov 2015 02:08:42 GMT',
+339 silly registry.get     via: '1.1 varnish',
+339 silly registry.get     age: '0',
+339 silly registry.get     connection: 'keep-alive',
+339 silly registry.get     'x-served-by': 'cache-iad2146-IAD',
+339 silly registry.get     'x-cache': 'HIT',
+339 silly registry.get     'x-cache-hits': '1',
+339 silly registry.get     'x-timer': 'S1446948522.308258,VS0,VE86',
+339 silly registry.get     vary: 'Accept' } ]
+340 silly addNameRange number 2 { name: 'gulp-sass', range: '>=2.1.0-0 <3.0.0-0', hasData: true }
+341 silly addNameRange versions [ 'gulp-sass',
+341 silly addNameRange   [ '0.1.0',
+341 silly addNameRange     '0.2.1',
+341 silly addNameRange     '0.2.2',
+341 silly addNameRange     '0.2.3',
+341 silly addNameRange     '0.3.0',
+341 silly addNameRange     '0.4.0',
+341 silly addNameRange     '0.4.1',
+341 silly addNameRange     '0.5.0',
+341 silly addNameRange     '0.5.1',
+341 silly addNameRange     '0.5.2',
+341 silly addNameRange     '0.6.0',
+341 silly addNameRange     '0.7.0',
+341 silly addNameRange     '0.7.1',
+341 silly addNameRange     '0.7.2',
+341 silly addNameRange     '0.7.3',
+341 silly addNameRange     '1.0.0',
+341 silly addNameRange     '1.1.0',
+341 silly addNameRange     '1.2.0',
+341 silly addNameRange     '1.2.1',
+341 silly addNameRange     '1.2.2',
+341 silly addNameRange     '1.2.3',
+341 silly addNameRange     '1.2.4',
+341 silly addNameRange     '1.3.0',
+341 silly addNameRange     '1.3.1',
+341 silly addNameRange     '1.3.2',
+341 silly addNameRange     '1.3.3',
+341 silly addNameRange     '2.0.0-alpha.1',
+341 silly addNameRange     '2.0.0',
+341 silly addNameRange     '2.0.2',
+341 silly addNameRange     '2.0.3',
+341 silly addNameRange     '2.0.4',
+341 silly addNameRange     '2.1.0-beta',
+341 silly addNameRange     '2.1.0' ] ]
+342 verbose addNamed [ 'gulp-sass', '2.1.0' ]
+343 verbose addNamed [ '2.1.0', '2.1.0' ]
+344 silly lockFile 815ae9cd-gulp-sass-2-1-0 gulp-sass@2.1.0
+345 verbose lock gulp-sass@2.1.0 /Users/ben/.npm/815ae9cd-gulp-sass-2-1-0.lock
+346 silly lockFile 5f5ef2b8-rg-gulp-sass-gulp-sass-2-1-0-tgz https://registry.npmjs.org/gulp-sass/-/gulp-sass-2.1.0.tgz
+347 verbose lock https://registry.npmjs.org/gulp-sass/-/gulp-sass-2.1.0.tgz /Users/ben/.npm/5f5ef2b8-rg-gulp-sass-gulp-sass-2-1-0-tgz.lock
+348 verbose addRemoteTarball [ 'https://registry.npmjs.org/gulp-sass/-/gulp-sass-2.1.0.tgz',
+348 verbose addRemoteTarball   '2587bc535d8b508bc10f4e2cf35f01185737d80b' ]
+349 info retry fetch attempt 1 at 21:08:42
+350 verbose fetch to= /var/folders/v9/450sq__16x7023ybxly016hr0000gn/T/npm-9636-h0i_XzTI/registry.npmjs.org/gulp-sass/-/gulp-sass-2.1.0.tgz
+351 http GET https://registry.npmjs.org/gulp-sass/-/gulp-sass-2.1.0.tgz
+352 http 200 https://registry.npmjs.org/vinyl-source-stream
+353 silly registry.get cb [ 200,
+353 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+353 silly registry.get     etag: '"43BJREYC5ZETB9P7GSQCP4FU1"',
+353 silly registry.get     'content-type': 'application/json',
+353 silly registry.get     'cache-control': 'max-age=60',
+353 silly registry.get     'content-length': '10900',
+353 silly registry.get     'accept-ranges': 'bytes',
+353 silly registry.get     date: 'Sun, 08 Nov 2015 02:08:42 GMT',
+353 silly registry.get     via: '1.1 varnish',
+353 silly registry.get     age: '0',
+353 silly registry.get     connection: 'keep-alive',
+353 silly registry.get     'x-served-by': 'cache-iad2131-IAD',
+353 silly registry.get     'x-cache': 'HIT',
+353 silly registry.get     'x-cache-hits': '1',
+353 silly registry.get     'x-timer': 'S1446948522.357818,VS0,VE84',
+353 silly registry.get     vary: 'Accept' } ]
+354 silly addNameRange number 2 { name: 'vinyl-source-stream',
+354 silly addNameRange   range: '>=1.1.0-0 <2.0.0-0',
+354 silly addNameRange   hasData: true }
+355 silly addNameRange versions [ 'vinyl-source-stream',
+355 silly addNameRange   [ '0.0.0', '0.1.0', '0.1.1', '1.0.0', '1.1.0' ] ]
+356 verbose addNamed [ 'vinyl-source-stream', '1.1.0' ]
+357 verbose addNamed [ '1.1.0', '1.1.0' ]
+358 silly lockFile 8ee6baed-vinyl-source-stream-1-1-0 vinyl-source-stream@1.1.0
+359 verbose lock vinyl-source-stream@1.1.0 /Users/ben/.npm/8ee6baed-vinyl-source-stream-1-1-0.lock
+360 silly lockFile 8ee6baed-vinyl-source-stream-1-1-0 vinyl-source-stream@1.1.0
+361 silly lockFile 8ee6baed-vinyl-source-stream-1-1-0 vinyl-source-stream@1.1.0
+362 http 200 https://registry.npmjs.org/gulp
+363 silly registry.get cb [ 200,
+363 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+363 silly registry.get     etag: '"4A85TLVHDA1IEW3EK32AE06PM"',
+363 silly registry.get     'content-type': 'application/json',
+363 silly registry.get     'cache-control': 'max-age=60',
+363 silly registry.get     'content-length': '107616',
+363 silly registry.get     'accept-ranges': 'bytes',
+363 silly registry.get     date: 'Sun, 08 Nov 2015 02:08:42 GMT',
+363 silly registry.get     via: '1.1 varnish',
+363 silly registry.get     age: '7',
+363 silly registry.get     connection: 'keep-alive',
+363 silly registry.get     'x-served-by': 'cache-iad2142-IAD',
+363 silly registry.get     'x-cache': 'HIT',
+363 silly registry.get     'x-cache-hits': '1',
+363 silly registry.get     'x-timer': 'S1446948522.354207,VS0,VE0',
+363 silly registry.get     vary: 'Accept' } ]
+364 silly lockFile cc5803ce-vinyl-source-stream-1-1-0 vinyl-source-stream@^1.1.0
+365 silly lockFile cc5803ce-vinyl-source-stream-1-1-0 vinyl-source-stream@^1.1.0
+366 silly addNameRange number 2 { name: 'gulp', range: '>=3.9.0-0 <4.0.0-0', hasData: true }
+367 silly addNameRange versions [ 'gulp',
+367 silly addNameRange   [ '0.0.1',
+367 silly addNameRange     '0.0.2',
+367 silly addNameRange     '0.0.3',
+367 silly addNameRange     '0.0.4',
+367 silly addNameRange     '0.0.5',
+367 silly addNameRange     '0.0.7',
+367 silly addNameRange     '0.0.8',
+367 silly addNameRange     '0.0.9',
+367 silly addNameRange     '0.1.0',
+367 silly addNameRange     '0.2.0',
+367 silly addNameRange     '1.0.0',
+367 silly addNameRange     '1.1.0',
+367 silly addNameRange     '1.2.0',
+367 silly addNameRange     '1.2.1',
+367 silly addNameRange     '2.0.0',
+367 silly addNameRange     '2.0.1',
+367 silly addNameRange     '2.1.0',
+367 silly addNameRange     '2.2.0',
+367 silly addNameRange     '2.3.0',
+367 silly addNameRange     '2.4.0',
+367 silly addNameRange     '2.4.1',
+367 silly addNameRange     '2.6.0',
+367 silly addNameRange     '2.6.1',
+367 silly addNameRange     '2.7.0',
+367 silly addNameRange     '3.0.0',
+367 silly addNameRange     '3.1.1',
+367 silly addNameRange     '3.1.2',
+367 silly addNameRange     '3.1.3',
+367 silly addNameRange     '3.1.4',
+367 silly addNameRange     '3.2.0',
+367 silly addNameRange     '3.2.1',
+367 silly addNameRange     '3.2.2',
+367 silly addNameRange     '3.2.3',
+367 silly addNameRange     '3.2.4',
+367 silly addNameRange     '3.2.5',
+367 silly addNameRange     '3.3.0',
+367 silly addNameRange     '3.3.1',
+367 silly addNameRange     '3.3.2',
+367 silly addNameRange     '3.3.4',
+367 silly addNameRange     '3.4.0',
+367 silly addNameRange     '3.5.0',
+367 silly addNameRange     '3.5.1',
+367 silly addNameRange     '3.5.2',
+367 silly addNameRange     '3.5.5',
+367 silly addNameRange     '3.5.6',
+367 silly addNameRange     '3.6.0',
+367 silly addNameRange     '3.6.1',
+367 silly addNameRange     '3.6.2',
+367 silly addNameRange     '3.7.0',
+367 silly addNameRange     '3.8.0',
+367 silly addNameRange     '3.8.1',
+367 silly addNameRange     '3.8.2',
+367 silly addNameRange     '3.8.3',
+367 silly addNameRange     '3.8.4',
+367 silly addNameRange     '3.8.5',
+367 silly addNameRange     '3.8.6',
+367 silly addNameRange     '3.8.7',
+367 silly addNameRange     '3.8.8',
+367 silly addNameRange     '3.8.9',
+367 silly addNameRange     '3.8.10',
+367 silly addNameRange     '3.8.11',
+367 silly addNameRange     '3.9.0' ] ]
+368 verbose addNamed [ 'gulp', '3.9.0' ]
+369 verbose addNamed [ '3.9.0', '3.9.0' ]
+370 silly lockFile c2697a61-gulp-3-9-0 gulp@3.9.0
+371 verbose lock gulp@3.9.0 /Users/ben/.npm/c2697a61-gulp-3-9-0.lock
+372 silly lockFile c2697a61-gulp-3-9-0 gulp@3.9.0
+373 silly lockFile c2697a61-gulp-3-9-0 gulp@3.9.0
+374 silly lockFile a7ccee77-gulp-3-9-0 gulp@^3.9.0
+375 silly lockFile a7ccee77-gulp-3-9-0 gulp@^3.9.0
+376 http 200 https://registry.npmjs.org/browser-sync
+377 silly registry.get cb [ 200,
+377 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+377 silly registry.get     etag: '"29BK6TALAFY644KOZMDZIVM20"',
+377 silly registry.get     'content-type': 'application/json',
+377 silly registry.get     'cache-control': 'max-age=60',
+377 silly registry.get     'content-length': '411058',
+377 silly registry.get     'accept-ranges': 'bytes',
+377 silly registry.get     date: 'Sun, 08 Nov 2015 02:08:42 GMT',
+377 silly registry.get     via: '1.1 varnish',
+377 silly registry.get     age: '0',
+377 silly registry.get     connection: 'keep-alive',
+377 silly registry.get     'x-served-by': 'cache-iad2144-IAD',
+377 silly registry.get     'x-cache': 'HIT',
+377 silly registry.get     'x-cache-hits': '1',
+377 silly registry.get     'x-timer': 'S1446948522.188519,VS0,VE57',
+377 silly registry.get     vary: 'Accept' } ]
+378 http 200 https://registry.npmjs.org/backbone
+379 silly registry.get cb [ 200,
+379 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+379 silly registry.get     etag: '"4GRKS2QS36G7RUY4O97C3XSZD"',
+379 silly registry.get     'content-type': 'application/json',
+379 silly registry.get     'cache-control': 'max-age=60',
+379 silly registry.get     'content-length': '28318',
+379 silly registry.get     'accept-ranges': 'bytes',
+379 silly registry.get     date: 'Sun, 08 Nov 2015 02:08:42 GMT',
+379 silly registry.get     via: '1.1 varnish',
+379 silly registry.get     age: '0',
+379 silly registry.get     connection: 'keep-alive',
+379 silly registry.get     'x-served-by': 'cache-iad2131-IAD',
+379 silly registry.get     'x-cache': 'HIT',
+379 silly registry.get     'x-cache-hits': '1',
+379 silly registry.get     'x-timer': 'S1446948522.528597,VS0,VE57',
+379 silly registry.get     vary: 'Accept' } ]
+380 http 200 https://registry.npmjs.org/watchify
+381 silly registry.get cb [ 200,
+381 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+381 silly registry.get     etag: '"8TUPIJJ9H9CJC7Z9RZHMTZGVI"',
+381 silly registry.get     'content-type': 'application/json',
+381 silly registry.get     'cache-control': 'max-age=60',
+381 silly registry.get     'content-length': '80573',
+381 silly registry.get     'accept-ranges': 'bytes',
+381 silly registry.get     date: 'Sun, 08 Nov 2015 02:08:42 GMT',
+381 silly registry.get     via: '1.1 varnish',
+381 silly registry.get     age: '0',
+381 silly registry.get     connection: 'keep-alive',
+381 silly registry.get     'x-served-by': 'cache-iad2142-IAD',
+381 silly registry.get     'x-cache': 'HIT',
+381 silly registry.get     'x-cache-hits': '1',
+381 silly registry.get     'x-timer': 'S1446948522.528259,VS0,VE12',
+381 silly registry.get     vary: 'Accept' } ]
+382 silly addNameRange number 2 { name: 'backbone', range: '>=1.2.3-0 <2.0.0-0', hasData: true }
+383 silly addNameRange versions [ 'backbone',
+383 silly addNameRange   [ '0.1.1',
+383 silly addNameRange     '0.1.2',
+383 silly addNameRange     '0.2.0',
+383 silly addNameRange     '0.3.0',
+383 silly addNameRange     '0.3.1',
+383 silly addNameRange     '0.3.2',
+383 silly addNameRange     '0.3.3',
+383 silly addNameRange     '0.5.0',
+383 silly addNameRange     '0.5.1',
+383 silly addNameRange     '0.5.2',
+383 silly addNameRange     '0.5.3',
+383 silly addNameRange     '0.9.0',
+383 silly addNameRange     '0.9.1',
+383 silly addNameRange     '0.9.2',
+383 silly addNameRange     '0.9.9',
+383 silly addNameRange     '0.9.10',
+383 silly addNameRange     '1.0.0',
+383 silly addNameRange     '1.1.0',
+383 silly addNameRange     '1.1.1',
+383 silly addNameRange     '1.1.2',
+383 silly addNameRange     '1.2.0',
+383 silly addNameRange     '1.2.1',
+383 silly addNameRange     '1.2.2',
+383 silly addNameRange     '1.2.3' ] ]
+384 verbose addNamed [ 'backbone', '1.2.3' ]
+385 verbose addNamed [ '1.2.3', '1.2.3' ]
+386 silly lockFile c294fed3-backbone-1-2-3 backbone@1.2.3
+387 verbose lock backbone@1.2.3 /Users/ben/.npm/c294fed3-backbone-1-2-3.lock
+388 silly addNameRange number 2 { name: 'watchify', range: '>=3.6.0-0 <4.0.0-0', hasData: true }
+389 silly addNameRange versions [ 'watchify',
+389 silly addNameRange   [ '0.0.0',
+389 silly addNameRange     '0.0.1',
+389 silly addNameRange     '0.1.0',
+389 silly addNameRange     '0.2.0',
+389 silly addNameRange     '0.3.0',
+389 silly addNameRange     '0.4.0',
+389 silly addNameRange     '0.4.1',
+389 silly addNameRange     '0.5.0',
+389 silly addNameRange     '0.5.1',
+389 silly addNameRange     '0.5.2',
+389 silly addNameRange     '0.5.3',
+389 silly addNameRange     '0.5.4',
+389 silly addNameRange     '0.5.5',
+389 silly addNameRange     '0.5.6',
+389 silly addNameRange     '0.6.0',
+389 silly addNameRange     '0.6.1',
+389 silly addNameRange     '0.6.2',
+389 silly addNameRange     '0.6.3',
+389 silly addNameRange     '0.6.4',
+389 silly addNameRange     '0.7.0',
+389 silly addNameRange     '0.7.1',
+389 silly addNameRange     '0.7.2',
+389 silly addNameRange     '0.8.0',
+389 silly addNameRange     '0.8.1',
+389 silly addNameRange     '0.8.2',
+389 silly addNameRange     '0.8.3',
+389 silly addNameRange     '0.9.0',
+389 silly addNameRange     '0.10.0',
+389 silly addNameRange     '0.10.1',
+389 silly addNameRange     '0.10.2',
+389 silly addNameRange     '1.0.0',
+389 silly addNameRange     '1.0.1',
+389 silly addNameRange     '1.0.2',
+389 silly addNameRange     '1.0.3',
+389 silly addNameRange     '1.0.4',
+389 silly addNameRange     '1.0.5',
+389 silly addNameRange     '1.0.6',
+389 silly addNameRange     '2.0.0',
+389 silly addNameRange     '2.1.0',
+389 silly addNameRange     '2.1.1',
+389 silly addNameRange     '2.2.0',
+389 silly addNameRange     '2.2.1',
+389 silly addNameRange     '2.3.0',
+389 silly addNameRange     '2.4.0',
+389 silly addNameRange     '2.5.0',
+389 silly addNameRange     '2.6.0',
+389 silly addNameRange     '2.6.1',
+389 silly addNameRange     '2.6.2',
+389 silly addNameRange     '3.0.0',
+389 silly addNameRange     '3.0.1',
+389 silly addNameRange     '3.1.0',
+389 silly addNameRange     '3.1.1',
+389 silly addNameRange     '3.1.2',
+389 silly addNameRange     '3.2.0',
+389 silly addNameRange     '3.2.1',
+389 silly addNameRange     '3.2.2',
+389 silly addNameRange     '3.2.3',
+389 silly addNameRange     '3.3.0',
+389 silly addNameRange     '3.3.1',
+389 silly addNameRange     '3.4.0',
+389 silly addNameRange     '3.5.0',
+389 silly addNameRange     '3.6.0' ] ]
+390 verbose addNamed [ 'watchify', '3.6.0' ]
+391 verbose addNamed [ '3.6.0', '3.6.0' ]
+392 silly lockFile 710572e0-watchify-3-6-0 watchify@3.6.0
+393 verbose lock watchify@3.6.0 /Users/ben/.npm/710572e0-watchify-3-6-0.lock
+394 http 200 https://registry.npmjs.org/babelify
+395 silly registry.get cb [ 200,
+395 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+395 silly registry.get     etag: '"4YHRA9JW6XRV62SSYM4ICW8EQ"',
+395 silly registry.get     'content-type': 'application/json',
+395 silly registry.get     'cache-control': 'max-age=60',
+395 silly registry.get     'content-length': '28196',
+395 silly registry.get     'accept-ranges': 'bytes',
+395 silly registry.get     date: 'Sun, 08 Nov 2015 02:08:42 GMT',
+395 silly registry.get     via: '1.1 varnish',
+395 silly registry.get     age: '0',
+395 silly registry.get     connection: 'keep-alive',
+395 silly registry.get     'x-served-by': 'cache-iad2135-IAD',
+395 silly registry.get     'x-cache': 'HIT',
+395 silly registry.get     'x-cache-hits': '1',
+395 silly registry.get     'x-timer': 'S1446948522.186093,VS0,VE391',
+395 silly registry.get     vary: 'Accept' } ]
+396 silly lockFile 87a702f3--org-backbone-backbone-1-2-3-tgz https://registry.npmjs.org/backbone/-/backbone-1.2.3.tgz
+397 verbose lock https://registry.npmjs.org/backbone/-/backbone-1.2.3.tgz /Users/ben/.npm/87a702f3--org-backbone-backbone-1-2-3-tgz.lock
+398 silly lockFile 207f2dd4--org-watchify-watchify-3-6-0-tgz https://registry.npmjs.org/watchify/-/watchify-3.6.0.tgz
+399 verbose lock https://registry.npmjs.org/watchify/-/watchify-3.6.0.tgz /Users/ben/.npm/207f2dd4--org-watchify-watchify-3-6-0-tgz.lock
+400 silly addNameRange number 2 { name: 'browser-sync',
+400 silly addNameRange   range: '>=2.9.11-0 <3.0.0-0',
+400 silly addNameRange   hasData: true }
+401 silly addNameRange versions [ 'browser-sync',
+401 silly addNameRange   [ '0.1.0',
+401 silly addNameRange     '0.1.1',
+401 silly addNameRange     '0.1.3',
+401 silly addNameRange     '0.1.5',
+401 silly addNameRange     '0.1.6',
+401 silly addNameRange     '0.1.7',
+401 silly addNameRange     '0.1.8',
+401 silly addNameRange     '0.1.9',
+401 silly addNameRange     '0.1.10',
+401 silly addNameRange     '0.2.0',
+401 silly addNameRange     '0.2.1',
+401 silly addNameRange     '0.3.0',
+401 silly addNameRange     '0.3.1',
+401 silly addNameRange     '0.3.2',
+401 silly addNameRange     '0.3.3',
+401 silly addNameRange     '0.3.4',
+401 silly addNameRange     '0.3.5',
+401 silly addNameRange     '0.3.6',
+401 silly addNameRange     '0.3.7',
+401 silly addNameRange     '0.3.8',
+401 silly addNameRange     '0.3.10',
+401 silly addNameRange     '0.4.0',
+401 silly addNameRange     '0.4.1',
+401 silly addNameRange     '0.4.2',
+401 silly addNameRange     '0.4.21',
+401 silly addNameRange     '0.4.3',
+401 silly addNameRange     '0.4.4',
+401 silly addNameRange     '0.4.5',
+401 silly addNameRange     '0.4.6',
+401 silly addNameRange     '0.4.7',
+401 silly addNameRange     '0.4.8',
+401 silly addNameRange     '0.4.9',
+401 silly addNameRange     '0.4.10',
+401 silly addNameRange     '0.4.11',
+401 silly addNameRange     '0.4.12',
+401 silly addNameRange     '0.5.0',
+401 silly addNameRange     '0.5.1',
+401 silly addNameRange     '0.5.2',
+401 silly addNameRange     '0.5.3',
+401 silly addNameRange     '0.5.4',
+401 silly addNameRange     '0.5.5',
+401 silly addNameRange     '0.5.6',
+401 silly addNameRange     '0.5.7',
+401 silly addNameRange     '0.5.8',
+401 silly addNameRange     '0.5.9',
+401 silly addNameRange     '0.6.0',
+401 silly addNameRange     '0.6.1',
+401 silly addNameRange     '0.6.2',
+401 silly addNameRange     '0.7.0',
+401 silly addNameRange     '0.7.1',
+401 silly addNameRange     '0.7.2',
+401 silly addNameRange     '0.7.3',
+401 silly addNameRange     '0.7.4',
+401 silly addNameRange     '0.7.5',
+401 silly addNameRange     '0.7.7',
+401 silly addNameRange     '0.8.0',
+401 silly addNameRange     '0.8.1',
+401 silly addNameRange     '0.8.2',
+401 silly addNameRange     '0.9.0',
+401 silly addNameRange     '0.9.1',
+401 silly addNameRange     '1.0.0',
+401 silly addNameRange     '1.1.0',
+401 silly addNameRange     '1.1.1',
+401 silly addNameRange     '1.1.2',
+401 silly addNameRange     '1.2.0',
+401 silly addNameRange     '1.2.1',
+401 silly addNameRange     '1.3.0',
+401 silly addNameRange     '1.3.2',
+401 silly addNameRange     '1.3.3',
+401 silly addNameRange     '1.3.4',
+401 silly addNameRange     '1.3.5',
+401 silly addNameRange     '1.3.6',
+401 silly addNameRange     '1.3.7',
+401 silly addNameRange     '1.5.0',
+401 silly addNameRange     '1.5.1',
+401 silly addNameRange     '1.5.2',
+401 silly addNameRange     '1.5.3',
+401 silly addNameRange     '1.5.4',
+401 silly addNameRange     '1.5.5',
+401 silly addNameRange     '1.5.6',
+401 silly addNameRange     '1.5.7',
+401 silly addNameRange     '1.5.8',
+401 silly addNameRange     '1.5.9',
+401 silly addNameRange     '1.6.0',
+401 silly addNameRange     '1.6.1',
+401 silly addNameRange     '1.6.2',
+401 silly addNameRange     '1.6.3',
+401 silly addNameRange     '1.6.4',
+401 silly addNameRange     '1.6.5',
+401 silly addNameRange     '1.7.0',
+401 silly addNameRange     '1.7.1',
+401 silly addNameRange     '1.7.2',
+401 silly addNameRange     '1.7.3',
+401 silly addNameRange     '1.8.0',
+401 silly addNameRange     '1.8.1',
+401 silly addNameRange     '1.8.2',
+401 silly addNameRange     '1.8.3',
+401 silly addNameRange     '1.9.0',
+401 silly addNameRange     '1.9.1',
+401 silly addNameRange     '2.0.0-rc1',
+401 silly addNameRange     '2.0.0-rc2',
+401 silly addNameRange     '2.0.0-rc3',
+401 silly addNameRange     '2.0.0-rc4',
+401 silly addNameRange     '2.0.0-rc5',
+401 silly addNameRange     '2.0.0-rc6',
+401 silly addNameRange     '2.0.0-rc7',
+401 silly addNameRange     '2.0.0-rc8',
+401 silly addNameRange     '2.0.0-rc9',
+401 silly addNameRange     '2.0.0-rc10',
+401 silly addNameRange     '2.0.0',
+401 silly addNameRange     '2.0.1',
+401 silly addNameRange     '2.1.0',
+401 silly addNameRange     '2.1.1',
+401 silly addNameRange     '2.1.2',
+401 silly addNameRange     '2.1.3',
+401 silly addNameRange     '2.1.4',
+401 silly addNameRange     '2.1.6',
+401 silly addNameRange     '2.2.0',
+401 silly addNameRange     '2.2.1',
+401 silly addNameRange     '2.2.2',
+401 silly addNameRange     '2.2.3',
+401 silly addNameRange     '2.2.4',
+401 silly addNameRange     '2.2.5',
+401 silly addNameRange     '2.3.0',
+401 silly addNameRange     '2.3.1',
+401 silly addNameRange     '2.3.2',
+401 silly addNameRange     '2.4.0',
+401 silly addNameRange     '2.4.1',
+401 silly addNameRange     '2.5.0',
+401 silly addNameRange     '2.5.1',
+401 silly addNameRange     '2.5.2',
+401 silly addNameRange     '2.5.3',
+401 silly addNameRange     '2.6.0',
+401 silly addNameRange     '2.6.1',
+401 silly addNameRange     '2.6.2',
+401 silly addNameRange     '2.6.3',
+401 silly addNameRange     '2.6.4',
+401 silly addNameRange     '2.6.5',
+401 silly addNameRange     '2.6.6',
+401 silly addNameRange     '1.9.2',
+401 silly addNameRange     '2.6.7',
+401 silly addNameRange     '2.6.8',
+401 silly addNameRange     '2.6.9',
+401 silly addNameRange     '2.6.10',
+401 silly addNameRange     '2.6.11',
+401 silly addNameRange     '2.7.0',
+401 silly addNameRange     '2.7.1',
+401 silly addNameRange     '2.7.2',
+401 silly addNameRange     '2.7.3',
+401 silly addNameRange     '2.7.4',
+401 silly addNameRange     '2.7.5',
+401 silly addNameRange     '2.7.6',
+401 silly addNameRange     '2.7.7',
+401 silly addNameRange     '2.7.8',
+401 silly addNameRange     '2.7.9',
+401 silly addNameRange     '2.7.10',
+401 silly addNameRange     '2.7.11',
+401 silly addNameRange     '2.7.12',
+401 silly addNameRange     '2.7.13',
+401 silly addNameRange     '2.8.0',
+401 silly addNameRange     '2.8.1',
+401 silly addNameRange     '2.8.2',
+401 silly addNameRange     '2.8.3',
+401 silly addNameRange     '2.9.0',
+401 silly addNameRange     '2.9.1',
+401 silly addNameRange     '2.9.2',
+401 silly addNameRange     '2.9.3',
+401 silly addNameRange     '2.9.4',
+401 silly addNameRange     '2.9.5',
+401 silly addNameRange     '2.9.6',
+401 silly addNameRange     '2.9.7',
+401 silly addNameRange     '2.9.8',
+401 silly addNameRange     '2.9.9',
+401 silly addNameRange     '2.9.10',
+401 silly addNameRange     '2.9.11',
+401 silly addNameRange     '2.9.12' ] ]
+402 verbose addNamed [ 'browser-sync', '2.9.12' ]
+403 verbose addNamed [ '2.9.12', '2.9.12' ]
+404 silly lockFile 3a870996-browser-sync-2-9-12 browser-sync@2.9.12
+405 verbose lock browser-sync@2.9.12 /Users/ben/.npm/3a870996-browser-sync-2-9-12.lock
+406 verbose addRemoteTarball [ 'https://registry.npmjs.org/backbone/-/backbone-1.2.3.tgz',
+406 verbose addRemoteTarball   'c22cfd07fc86ebbeae61d18929ed115e999d65b9' ]
+407 verbose addRemoteTarball [ 'https://registry.npmjs.org/watchify/-/watchify-3.6.0.tgz',
+407 verbose addRemoteTarball   '5fe08e9f004b52d6a1c4520abfc71762b5ac62f2' ]
+408 silly lockFile 7dbbd528-ser-sync-browser-sync-2-9-12-tgz https://registry.npmjs.org/browser-sync/-/browser-sync-2.9.12.tgz
+409 verbose lock https://registry.npmjs.org/browser-sync/-/browser-sync-2.9.12.tgz /Users/ben/.npm/7dbbd528-ser-sync-browser-sync-2-9-12-tgz.lock
+410 info retry fetch attempt 1 at 21:08:42
+411 verbose fetch to= /var/folders/v9/450sq__16x7023ybxly016hr0000gn/T/npm-9636-h0i_XzTI/registry.npmjs.org/backbone/-/backbone-1.2.3.tgz
+412 info retry fetch attempt 1 at 21:08:42
+413 verbose fetch to= /var/folders/v9/450sq__16x7023ybxly016hr0000gn/T/npm-9636-h0i_XzTI/registry.npmjs.org/watchify/-/watchify-3.6.0.tgz
+414 silly addNameRange number 2 { name: 'babelify', range: '>=6.4.0-0 <7.0.0-0', hasData: true }
+415 silly addNameRange versions [ 'babelify',
+415 silly addNameRange   [ '5.0.1',
+415 silly addNameRange     '5.0.2',
+415 silly addNameRange     '5.0.3',
+415 silly addNameRange     '5.0.4',
+415 silly addNameRange     '6.0.0',
+415 silly addNameRange     '5.0.5',
+415 silly addNameRange     '6.0.1',
+415 silly addNameRange     '6.0.2',
+415 silly addNameRange     '6.1.0',
+415 silly addNameRange     '6.1.1',
+415 silly addNameRange     '6.1.2',
+415 silly addNameRange     '6.1.3',
+415 silly addNameRange     '6.2.0',
+415 silly addNameRange     '6.3.0',
+415 silly addNameRange     '6.4.0',
+415 silly addNameRange     '7.0.0',
+415 silly addNameRange     '7.0.1',
+415 silly addNameRange     '7.0.2',
+415 silly addNameRange     '7.1.0',
+415 silly addNameRange     '7.2.0' ] ]
+416 verbose addNamed [ 'babelify', '6.4.0' ]
+417 verbose addNamed [ '6.4.0', '6.4.0' ]
+418 silly lockFile e6007026-babelify-6-4-0 babelify@6.4.0
+419 verbose lock babelify@6.4.0 /Users/ben/.npm/e6007026-babelify-6-4-0.lock
+420 verbose addRemoteTarball [ 'https://registry.npmjs.org/browser-sync/-/browser-sync-2.9.12.tgz',
+420 verbose addRemoteTarball   '22b011e44e66503e0c00760f7c2b41fd248268d6' ]
+421 http GET https://registry.npmjs.org/backbone/-/backbone-1.2.3.tgz
+422 http GET https://registry.npmjs.org/watchify/-/watchify-3.6.0.tgz
+423 silly lockFile f22ca4a0--org-babelify-babelify-6-4-0-tgz https://registry.npmjs.org/babelify/-/babelify-6.4.0.tgz
+424 verbose lock https://registry.npmjs.org/babelify/-/babelify-6.4.0.tgz /Users/ben/.npm/f22ca4a0--org-babelify-babelify-6-4-0-tgz.lock
+425 info retry fetch attempt 1 at 21:08:42
+426 verbose fetch to= /var/folders/v9/450sq__16x7023ybxly016hr0000gn/T/npm-9636-h0i_XzTI/registry.npmjs.org/browser-sync/-/browser-sync-2.9.12.tgz
+427 verbose addRemoteTarball [ 'https://registry.npmjs.org/babelify/-/babelify-6.4.0.tgz',
+427 verbose addRemoteTarball   'caf43888ba731b876b5567b643eecc66147693a5' ]
+428 http GET https://registry.npmjs.org/browser-sync/-/browser-sync-2.9.12.tgz
+429 info retry fetch attempt 1 at 21:08:42
+430 verbose fetch to= /var/folders/v9/450sq__16x7023ybxly016hr0000gn/T/npm-9636-h0i_XzTI/registry.npmjs.org/babelify/-/babelify-6.4.0.tgz
+431 http GET https://registry.npmjs.org/babelify/-/babelify-6.4.0.tgz
+432 http 200 https://registry.npmjs.org/gulp-sourcemaps/-/gulp-sourcemaps-1.6.0.tgz
+433 http 200 https://registry.npmjs.org/react-router/-/react-router-1.0.0-rc4.tgz
+434 silly lockFile bfdfc8a9-cemaps-gulp-sourcemaps-1-6-0-tgz https://registry.npmjs.org/gulp-sourcemaps/-/gulp-sourcemaps-1.6.0.tgz
+435 silly lockFile bfdfc8a9-cemaps-gulp-sourcemaps-1-6-0-tgz https://registry.npmjs.org/gulp-sourcemaps/-/gulp-sourcemaps-1.6.0.tgz
+436 silly lockFile d4931dcb-gulp-sourcemaps-1-6-0 gulp-sourcemaps@1.6.0
+437 silly lockFile d4931dcb-gulp-sourcemaps-1-6-0 gulp-sourcemaps@1.6.0
+438 silly lockFile c55741cd-gulp-sourcemaps-1-6-0 gulp-sourcemaps@^1.6.0
+439 silly lockFile c55741cd-gulp-sourcemaps-1-6-0 gulp-sourcemaps@^1.6.0
+440 http 200 https://registry.npmjs.org/react/-/react-0.14.2.tgz
+441 http 200 https://registry.npmjs.org/history/-/history-1.13.0.tgz
+442 http 200 https://registry.npmjs.org/gulp-sass/-/gulp-sass-2.1.0.tgz
+443 silly lockFile 5f5ef2b8-rg-gulp-sass-gulp-sass-2-1-0-tgz https://registry.npmjs.org/gulp-sass/-/gulp-sass-2.1.0.tgz
+444 silly lockFile 5f5ef2b8-rg-gulp-sass-gulp-sass-2-1-0-tgz https://registry.npmjs.org/gulp-sass/-/gulp-sass-2.1.0.tgz
+445 silly lockFile 815ae9cd-gulp-sass-2-1-0 gulp-sass@2.1.0
+446 silly lockFile 815ae9cd-gulp-sass-2-1-0 gulp-sass@2.1.0
+447 silly lockFile 5e2744dd-gulp-sass-2-1-0 gulp-sass@^2.1.0
+448 silly lockFile 5e2744dd-gulp-sass-2-1-0 gulp-sass@^2.1.0
+449 http 200 https://registry.npmjs.org/backbone/-/backbone-1.2.3.tgz
+450 silly lockFile 8a872405-s-org-history-history-1-13-0-tgz https://registry.npmjs.org/history/-/history-1.13.0.tgz
+451 silly lockFile 8a872405-s-org-history-history-1-13-0-tgz https://registry.npmjs.org/history/-/history-1.13.0.tgz
+452 silly lockFile 01896074-outer-react-router-1-0-0-rc4-tgz https://registry.npmjs.org/react-router/-/react-router-1.0.0-rc4.tgz
+453 silly lockFile 01896074-outer-react-router-1-0-0-rc4-tgz https://registry.npmjs.org/react-router/-/react-router-1.0.0-rc4.tgz
+454 silly lockFile b4b9dd75-history-1-13-0 history@1.13.0
+455 silly lockFile b4b9dd75-history-1-13-0 history@1.13.0
+456 silly lockFile 4193a916-react-router-1-0-0-rc4 react-router@1.0.0-rc4
+457 silly lockFile 4193a916-react-router-1-0-0-rc4 react-router@1.0.0-rc4
+458 silly lockFile c0e38860-history-1-13-0 history@^1.13.0
+459 silly lockFile c0e38860-history-1-13-0 history@^1.13.0
+460 silly lockFile e2b1bdee-react-router-1-0-0-rc3 react-router@^1.0.0-rc3
+461 silly lockFile e2b1bdee-react-router-1-0-0-rc3 react-router@^1.0.0-rc3
+462 http 200 https://registry.npmjs.org/watchify/-/watchify-3.6.0.tgz
+463 silly lockFile 207f2dd4--org-watchify-watchify-3-6-0-tgz https://registry.npmjs.org/watchify/-/watchify-3.6.0.tgz
+464 silly lockFile 207f2dd4--org-watchify-watchify-3-6-0-tgz https://registry.npmjs.org/watchify/-/watchify-3.6.0.tgz
+465 silly lockFile 710572e0-watchify-3-6-0 watchify@3.6.0
+466 silly lockFile 710572e0-watchify-3-6-0 watchify@3.6.0
+467 silly lockFile c7872213-watchify-3-6-0 watchify@^3.6.0
+468 silly lockFile c7872213-watchify-3-6-0 watchify@^3.6.0
+469 http 200 https://registry.npmjs.org/babelify/-/babelify-6.4.0.tgz
+470 silly lockFile 87a702f3--org-backbone-backbone-1-2-3-tgz https://registry.npmjs.org/backbone/-/backbone-1.2.3.tgz
+471 silly lockFile 87a702f3--org-backbone-backbone-1-2-3-tgz https://registry.npmjs.org/backbone/-/backbone-1.2.3.tgz
+472 silly lockFile c294fed3-backbone-1-2-3 backbone@1.2.3
+473 silly lockFile c294fed3-backbone-1-2-3 backbone@1.2.3
+474 silly lockFile 5acc2495-backbone-1-2-3 backbone@^1.2.3
+475 silly lockFile 5acc2495-backbone-1-2-3 backbone@^1.2.3
+476 silly lockFile f22ca4a0--org-babelify-babelify-6-4-0-tgz https://registry.npmjs.org/babelify/-/babelify-6.4.0.tgz
+477 silly lockFile f22ca4a0--org-babelify-babelify-6-4-0-tgz https://registry.npmjs.org/babelify/-/babelify-6.4.0.tgz
+478 silly lockFile e6007026-babelify-6-4-0 babelify@6.4.0
+479 silly lockFile e6007026-babelify-6-4-0 babelify@6.4.0
+480 silly lockFile 11649136-babelify-6-4-0 babelify@^6.4.0
+481 silly lockFile 11649136-babelify-6-4-0 babelify@^6.4.0
+482 http 200 https://registry.npmjs.org/browser-sync/-/browser-sync-2.9.12.tgz
+483 silly lockFile 7dbbd528-ser-sync-browser-sync-2-9-12-tgz https://registry.npmjs.org/browser-sync/-/browser-sync-2.9.12.tgz
+484 silly lockFile 7dbbd528-ser-sync-browser-sync-2-9-12-tgz https://registry.npmjs.org/browser-sync/-/browser-sync-2.9.12.tgz
+485 silly lockFile 3a870996-browser-sync-2-9-12 browser-sync@2.9.12
+486 silly lockFile 3a870996-browser-sync-2-9-12 browser-sync@2.9.12
+487 silly lockFile 45bae07c-browser-sync-2-9-11 browser-sync@^2.9.11
+488 silly lockFile 45bae07c-browser-sync-2-9-11 browser-sync@^2.9.11
+489 http 200 https://registry.npmjs.org/browserify
+490 silly registry.get cb [ 200,
+490 silly registry.get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+490 silly registry.get     etag: '"2HAAHPLY4AXIWIALVL9FMQ5T2"',
+490 silly registry.get     'content-type': 'application/json',
+490 silly registry.get     'cache-control': 'max-age=60',
+490 silly registry.get     'content-length': '850099',
+490 silly registry.get     'accept-ranges': 'bytes',
+490 silly registry.get     date: 'Sun, 08 Nov 2015 02:08:42 GMT',
+490 silly registry.get     via: '1.1 varnish',
+490 silly registry.get     age: '55',
+490 silly registry.get     connection: 'keep-alive',
+490 silly registry.get     'x-served-by': 'cache-iad2146-IAD',
+490 silly registry.get     'x-cache': 'HIT',
+490 silly registry.get     'x-cache-hits': '1',
+490 silly registry.get     'x-timer': 'S1446948522.441280,VS0,VE3',
+490 silly registry.get     vary: 'Accept' } ]
+491 silly addNameRange number 2 { name: 'browserify',
+491 silly addNameRange   range: '>=12.0.1-0 <13.0.0-0',
+491 silly addNameRange   hasData: true }
+492 silly addNameRange versions [ 'browserify',
+492 silly addNameRange   [ '0.0.1',
+492 silly addNameRange     '0.0.2',
+492 silly addNameRange     '0.0.3',
+492 silly addNameRange     '0.0.4',
+492 silly addNameRange     '0.0.5',
+492 silly addNameRange     '0.1.0',
+492 silly addNameRange     '0.1.1',
+492 silly addNameRange     '0.1.2',
+492 silly addNameRange     '0.1.3',
+492 silly addNameRange     '0.1.4',
+492 silly addNameRange     '0.1.5',
+492 silly addNameRange     '0.2.0',
+492 silly addNameRange     '0.2.1',
+492 silly addNameRange     '0.2.2',
+492 silly addNameRange     '0.2.3',
+492 silly addNameRange     '0.2.4',
+492 silly addNameRange     '0.2.5',
+492 silly addNameRange     '0.2.6',
+492 silly addNameRange     '0.2.7',
+492 silly addNameRange     '0.2.8',
+492 silly addNameRange     '0.2.9',
+492 silly addNameRange     '0.2.10',
+492 silly addNameRange     '0.2.11',
+492 silly addNameRange     '0.3.0',
+492 silly addNameRange     '0.3.1',
+492 silly addNameRange     '0.3.2',
+492 silly addNameRange     '0.3.3',
+492 silly addNameRange     '0.3.4',
+492 silly addNameRange     '0.3.5',
+492 silly addNameRange     '0.3.6',
+492 silly addNameRange     '0.3.7',
+492 silly addNameRange     '0.4.0',
+492 silly addNameRange     '0.4.1',
+492 silly addNameRange     '0.4.2',
+492 silly addNameRange     '0.4.3',
+492 silly addNameRange     '0.4.4',
+492 silly addNameRange     '0.4.5',
+492 silly addNameRange     '0.4.6',
+492 silly addNameRange     '0.4.7',
+492 silly addNameRange     '0.4.8',
+492 silly addNameRange     '0.4.9',
+492 silly addNameRange     '0.4.10',
+492 silly addNameRange     '0.4.11',
+492 silly addNameRange     '0.4.12',
+492 silly addNameRange     '0.4.13',
+492 silly addNameRange     '0.4.14',
+492 silly addNameRange     '0.4.15',
+492 silly addNameRange     '0.5.0',
+492 silly addNameRange     '0.5.1',
+492 silly addNameRange     '0.5.2',
+492 silly addNameRange     '1.0.0',
+492 silly addNameRange     '1.1.0',
+492 silly addNameRange     '1.1.1',
+492 silly addNameRange     '1.1.2',
+492 silly addNameRange     '1.1.3',
+492 silly addNameRange     '1.1.4',
+492 silly addNameRange     '1.2.0',
+492 silly addNameRange     '1.2.1',
+492 silly addNameRange     '1.2.2',
+492 silly addNameRange     '1.2.3',
+492 silly addNameRange     '1.2.4',
+492 silly addNameRange     '1.2.5',
+492 silly addNameRange     '1.2.6',
+492 silly addNameRange     '1.2.7',
+492 silly addNameRange     '1.2.8',
+492 silly addNameRange     '1.2.9',
+492 silly addNameRange     '1.3.0',
+492 silly addNameRange     '1.4.0',
+492 silly addNameRange     '1.4.1',
+492 silly addNameRange     '1.4.2',
+492 silly addNameRange     '1.4.3',
+492 silly addNameRange     '1.4.4',
+492 silly addNameRange     '1.4.5',
+492 silly addNameRange     '1.4.6',
+492 silly addNameRange     '1.4.7',
+492 silly addNameRange     '1.4.8',
+492 silly addNameRange     '1.5.0',
+492 silly addNameRange     '1.6.0',
+492 silly addNameRange     '1.6.1',
+492 silly addNameRange     '1.7.0',
+492 silly addNameRange     '1.7.1',
+492 silly addNameRange     '1.7.2',
+492 silly addNameRange     '1.7.3',
+492 silly addNameRange     '1.7.4',
+492 silly addNameRange     '1.7.5',
+492 silly addNameRange     '1.7.6',
+492 silly addNameRange     '1.7.7',
+492 silly addNameRange     '1.8.0',
+492 silly addNameRange     '1.8.1',
+492 silly addNameRange     '1.8.2',
+492 silly addNameRange     '1.8.3',
+492 silly addNameRange     '1.9.0',
+492 silly addNameRange     '1.9.1',
+492 silly addNameRange     '1.9.2',
+492 silly addNameRange     '1.9.3',
+492 silly addNameRange     '1.9.4',
+492 silly addNameRange     '1.10.0',
+492 silly addNameRange     '1.10.1',
+492 silly addNameRange     '1.10.2',
+492 silly addNameRange     '1.10.3',
+492 silly addNameRange     '1.10.4',
+492 silly addNameRange     '1.10.5',
+492 silly addNameRange     '1.10.6',
+492 silly addNameRange     '1.10.7',
+492 silly addNameRange     '1.10.8',
+492 silly addNameRange     '1.10.9',
+492 silly addNameRange     '1.10.11',
+492 silly addNameRange     '1.10.12',
+492 silly addNameRange     '1.10.13',
+492 silly addNameRange     '1.10.14',
+492 silly addNameRange     '1.10.15',
+492 silly addNameRange     '1.10.16',
+492 silly addNameRange     '1.10.17',
+492 silly addNameRange     '1.11.0',
+492 silly addNameRange     '1.11.1',
+492 silly addNameRange     '1.12.0',
+492 silly addNameRange     '1.12.1',
+492 silly addNameRange     '1.12.2',
+492 silly addNameRange     '1.12.3',
+492 silly addNameRange     '1.13.0',
+492 silly addNameRange     '1.13.1',
+492 silly addNameRange     '1.13.2',
+492 silly addNameRange     '1.13.3',
+492 silly addNameRange     '1.13.4',
+492 silly addNameRange     '1.13.5',
+492 silly addNameRange     '1.13.6',
+492 silly addNameRange     '1.13.8',
+492 silly addNameRange     '1.13.9',
+492 silly addNameRange     '1.13.10',
+492 silly addNameRange     '1.14.0',
+492 silly addNameRange     '1.14.1',
+492 silly addNameRange     '1.14.2',
+492 silly addNameRange     '1.14.3',
+492 silly addNameRange     '1.14.4',
+492 silly addNameRange     '1.14.5',
+492 silly addNameRange     '1.15.0',
+492 silly addNameRange     '1.15.1',
+492 silly addNameRange     '1.15.2',
+492 silly addNameRange     '1.15.3',
+492 silly addNameRange     '1.15.4',
+492 silly addNameRange     '1.15.5',
+492 silly addNameRange     '1.15.6',
+492 silly addNameRange     '1.16.0',
+492 silly addNameRange     '1.16.1',
+492 silly addNameRange     '1.16.2',
+492 silly addNameRange     '1.16.3',
+492 silly addNameRange     '1.16.4',
+492 silly addNameRange     '1.16.5',
+492 silly addNameRange     '1.16.6',
+492 silly addNameRange     '1.16.7',
+492 silly addNameRange     '1.16.8',
+492 silly addNameRange     '1.17.0',
+492 silly addNameRange     '1.17.1',
+492 silly addNameRange     '1.17.2',
+492 silly addNameRange     '1.17.3',
+492 silly addNameRange     '1.18.0',
+492 silly addNameRange     '2.0.0',
+492 silly addNameRange     '2.0.1',
+492 silly addNameRange     '2.1.0',
+492 silly addNameRange     '2.2.0',
+492 silly addNameRange     '2.2.1',
+492 silly addNameRange     '2.2.2',
+492 silly addNameRange     '2.2.3',
+492 silly addNameRange     '2.2.4',
+492 silly addNameRange     '2.2.5',
+492 silly addNameRange     '2.2.6',
+492 silly addNameRange     '2.3.0',
+492 silly addNameRange     '2.3.1',
+492 silly addNameRange     '2.4.0',
+492 silly addNameRange     '2.4.1',
+492 silly addNameRange     '2.4.2',
+492 silly addNameRange     '2.4.3',
+492 silly addNameRange     '2.5.0',
+492 silly addNameRange     '2.5.1',
+492 silly addNameRange     '2.6.0',
+492 silly addNameRange     '2.6.1',
+492 silly addNameRange     '2.7.0',
+492 silly addNameRange     '2.7.1',
+492 silly addNameRange     '2.7.2',
+492 silly addNameRange     '2.7.3',
+492 silly addNameRange     '2.7.4',
+492 silly addNameRange     '2.8.0',
+492 silly addNameRange     '2.8.1',
+492 silly addNameRange     '2.9.0',
+492 silly addNameRange     '2.10.0',
+492 silly addNameRange     '2.10.1',
+492 silly addNameRange     '2.10.2',
+492 silly addNameRange     '2.11.0',
+492 silly addNameRange     '2.12.0',
+492 silly addNameRange     '2.12.1',
+492 silly addNameRange     '2.12.2',
+492 silly addNameRange     '2.12.3',
+492 silly addNameRange     '2.12.4',
+492 silly addNameRange     '2.12.5',
+492 silly addNameRange     '2.13.0',
+492 silly addNameRange     '2.13.1',
+492 silly addNameRange     '2.13.2',
+492 silly addNameRange     '2.13.3',
+492 silly addNameRange     '2.14.0',
+492 silly addNameRange     '2.14.1',
+492 silly addNameRange     '2.14.2',
+492 silly addNameRange     '2.15.0',
+492 silly addNameRange     '2.16.0',
+492 silly addNameRange     '2.17.0',
+492 silly addNameRange     '2.17.1',
+492 silly addNameRange     '2.17.2',
+492 silly addNameRange     '2.17.3',
+492 silly addNameRange     '2.17.4',
+492 silly addNameRange     '2.18.0',
+492 silly addNameRange     '2.18.1',
+492 silly addNameRange     '2.19.0',
+492 silly addNameRange     '2.20.0',
+492 silly addNameRange     '2.20.1',
+492 silly addNameRange     '2.20.2',
+492 silly addNameRange     '2.21.0',
+492 silly addNameRange     '2.22.0',
+492 silly addNameRange     '2.23.0',
+492 silly addNameRange     '2.23.1',
+492 silly addNameRange     '2.24.0',
+492 silly addNameRange     '2.24.1',
+492 silly addNameRange     '2.24.2',
+492 silly addNameRange     '2.24.3',
+492 silly addNameRange     '2.25.0',
+492 silly addNameRange     '2.25.1',
+492 silly addNameRange     '2.26.0',
+492 silly addNameRange     '2.27.0',
+492 silly addNameRange     '2.27.1',
+492 silly addNameRange     '2.28.0',
+492 silly addNameRange     '2.29.0',
+492 silly addNameRange     '2.29.1',
+492 silly addNameRange     '2.30.0',
+492 silly addNameRange     '2.31.0',
+492 silly addNameRange     '2.32.0',
+492 silly addNameRange     '2.32.1',
+492 silly addNameRange     '2.32.2',
+492 silly addNameRange     '2.32.3',
+492 silly addNameRange     '2.32.4',
+492 silly addNameRange     '2.33.0',
+492 silly addNameRange     '2.33.1',
+492 silly addNameRange     '2.34.0',
+492 silly addNameRange     '2.34.1',
+492 silly addNameRange     '2.34.2',
+492 silly addNameRange     '2.34.3',
+492 silly addNameRange     '2.35.0',
+492 silly addNameRange     '2.35.1',
+492 silly addNameRange     '2.35.2',
+492 silly addNameRange     '2.35.3',
+492 silly addNameRange     '2.35.4',
+492 silly addNameRange     '2.36.0',
+492 silly addNameRange     '2.36.1',
+492 silly addNameRange     '3.0.0',
+492 silly addNameRange     '3.1.0',
+492 silly addNameRange     '3.1.1',
+492 silly addNameRange     '3.1.2',
+492 silly addNameRange     '3.1.3',
+492 silly addNameRange     '3.2.0',
+492 silly addNameRange     '3.2.1',
+492 silly addNameRange     '3.2.2',
+492 silly addNameRange     '3.3.0',
+492 silly addNameRange     '3.4.0',
+492 silly addNameRange     '3.4.1',
+492 silly addNameRange     '3.5.0',
+492 silly addNameRange     '3.6.0',
+492 silly addNameRange     '3.7.0',
+492 silly addNameRange     '3.8.0',
+492 silly addNameRange     '3.8.1',
+492 silly addNameRange     '3.9.0',
+492 silly addNameRange     '3.9.1',
+492 silly addNameRange     '3.10.0',
+492 silly addNameRange     '3.11.0',
+492 silly addNameRange     '3.11.1',
+492 silly addNameRange     '3.12.0',
+492 silly addNameRange     '3.13.0',
+492 silly addNameRange     '3.14.0',
+492 silly addNameRange     '3.14.1',
+492 silly addNameRange     '3.16.0',
+492 silly addNameRange     '3.16.1',
+492 silly addNameRange     '3.17.0',
+492 silly addNameRange     '3.18.0',
+492 silly addNameRange     '3.19.0',
+492 silly addNameRange     '3.19.1',
+492 silly addNameRange     '3.20.0',
+492 silly addNameRange     '3.20.1',
+492 silly addNameRange     '3.20.2',
+492 silly addNameRange     '3.21.0',
+492 silly addNameRange     '3.21.1',
+492 silly addNameRange     '3.22.0',
+492 silly addNameRange     '3.22.1',
+492 silly addNameRange     '3.23.0',
+492 silly addNameRange     '3.23.1',
+492 silly addNameRange     '3.24.0',
+492 silly addNameRange     '3.24.1',
+492 silly addNameRange     '3.24.2',
+492 silly addNameRange     '3.24.3',
+492 silly addNameRange     '3.24.4',
+492 silly addNameRange     '3.24.5',
+492 silly addNameRange     '3.24.6',
+492 silly addNameRange     '3.24.7',
+492 silly addNameRange     '3.24.8',
+492 silly addNameRange     '3.24.9',
+492 silly addNameRange     '3.24.10',
+492 silly addNameRange     '3.24.11',
+492 silly addNameRange     '3.24.13',
+492 silly addNameRange     '3.25.0',
+492 silly addNameRange     '3.25.1',
+492 silly addNameRange     '3.25.2',
+492 silly addNameRange     '3.26.0',
+492 silly addNameRange     '3.27.0',
+492 silly addNameRange     '3.27.1',
+492 silly addNameRange     '3.28.0',
+492 silly addNameRange     '3.28.1',
+492 silly addNameRange     '3.28.2',
+492 silly addNameRange     '3.29.0',
+492 silly addNameRange     '3.29.1',
+492 silly addNameRange     '3.30.0',
+492 silly addNameRange     '3.30.1',
+492 silly addNameRange     '3.30.2',
+492 silly addNameRange     '3.30.3',
+492 silly addNameRange     '3.30.4',
+492 silly addNameRange     '3.31.0',
+492 silly addNameRange     '3.31.1',
+492 silly addNameRange     '3.31.2',
+492 silly addNameRange     '3.32.0',
+492 silly addNameRange     '3.32.1',
+492 silly addNameRange     '3.33.0',
+492 silly addNameRange     '3.33.1',
+492 silly addNameRange     '3.34.0',
+492 silly addNameRange     '3.35.0',
+492 silly addNameRange     '3.36.0',
+492 silly addNameRange     '3.36.1',
+492 silly addNameRange     '3.37.0',
+492 silly addNameRange     '3.37.1',
+492 silly addNameRange     '3.37.2',
+492 silly addNameRange     '3.38.0',
+492 silly addNameRange     '3.38.1',
+492 silly addNameRange     '3.39.0',
+492 silly addNameRange     '3.40.0',
+492 silly addNameRange     '3.40.1',
+492 silly addNameRange     '3.40.2',
+492 silly addNameRange     '3.40.3',
+492 silly addNameRange     '3.40.4',
+492 silly addNameRange     '3.41.0',
+492 silly addNameRange     '3.42.0',
+492 silly addNameRange     '3.43.0',
+492 silly addNameRange     '3.44.0',
+492 silly addNameRange     '3.44.1',
+492 silly addNameRange     '3.44.2',
+492 silly addNameRange     '3.45.0',
+492 silly addNameRange     '3.46.0',
+492 silly addNameRange     '3.46.1',
+492 silly addNameRange     '4.0.0',
+492 silly addNameRange     '4.1.0',
+492 silly addNameRange     '4.1.1',
+492 silly addNameRange     '4.1.2',
+492 silly addNameRange     '4.1.3',
+492 silly addNameRange     '4.1.4',
+492 silly addNameRange     '4.1.5',
+492 silly addNameRange     '4.1.6',
+492 silly addNameRange     '4.1.7',
+492 silly addNameRange     '4.1.8',
+492 silly addNameRange     '4.1.9',
+492 silly addNameRange     '4.1.10',
+492 silly addNameRange     '4.1.11',
+492 silly addNameRange     '4.2.0',
+492 silly addNameRange     '4.2.1',
+492 silly addNameRange     '4.2.2',
+492 silly addNameRange     '4.2.3',
+492 silly addNameRange     '5.0.0',
+492 silly addNameRange     '5.0.1',
+492 silly addNameRange     '5.0.2',
+492 silly addNameRange     '5.0.3',
+492 silly addNameRange     '5.0.4',
+492 silly addNameRange     '5.0.5',
+492 silly addNameRange     '5.0.6',
+492 silly addNameRange     '5.0.7',
+492 silly addNameRange     '5.0.8',
+492 silly addNameRange     '5.1.0',
+492 silly addNameRange     '5.1.1',
+492 silly addNameRange     '5.2.0',
+492 silly addNameRange     '5.2.1',
+492 silly addNameRange     '5.3.0',
+492 silly addNameRange     '5.4.0',
+492 silly addNameRange     '5.4.1',
+492 silly addNameRange     '5.4.2',
+492 silly addNameRange     '5.5.0',
+492 silly addNameRange     '5.6.0',
+492 silly addNameRange     '5.6.1',
+492 silly addNameRange     '5.7.0',
+492 silly addNameRange     '5.8.0',
+492 silly addNameRange     '5.9.0',
+492 silly addNameRange     '5.9.1',
+492 silly addNameRange     '5.9.2',
+492 silly addNameRange     '5.9.3',
+492 silly addNameRange     '5.10.0',
+492 silly addNameRange     '5.10.1',
+492 silly addNameRange     '5.11.0',
+492 silly addNameRange     '5.11.1',
+492 silly addNameRange     '5.11.2',
+492 silly addNameRange     '5.12.0',
+492 silly addNameRange     '5.12.1',
+492 silly addNameRange     '5.12.2',
+492 silly addNameRange     '5.13.0',
+492 silly addNameRange     '5.13.1',
+492 silly addNameRange     '6.0.0',
+492 silly addNameRange     '6.0.1',
+492 silly addNameRange     '6.0.2',
+492 silly addNameRange     '6.0.3',
+492 silly addNameRange     '6.1.0',
+492 silly addNameRange     '6.1.1',
+492 silly addNameRange     '6.1.2',
+492 silly addNameRange     '6.2.0',
+492 silly addNameRange     '6.3.0',
+492 silly addNameRange     '6.3.1',
+492 silly addNameRange     '6.3.2',
+492 silly addNameRange     '6.3.3',
+492 silly addNameRange     '6.3.4',
+492 silly addNameRange     '7.0.0',
+492 silly addNameRange     '7.0.1',
+492 silly addNameRange     '7.0.2',
+492 silly addNameRange     '7.0.3',
+492 silly addNameRange     '7.1.0',
+492 silly addNameRange     '8.0.0',
+492 silly addNameRange     '8.0.1',
+492 silly addNameRange     '8.0.2',
+492 silly addNameRange     '8.0.3',
+492 silly addNameRange     '8.1.0',
+492 silly addNameRange     '8.1.1',
+492 silly addNameRange     '8.1.2',
+492 silly addNameRange     '8.1.3',
+492 silly addNameRange     '9.0.0',
+492 silly addNameRange     '9.0.1',
+492 silly addNameRange     '9.0.2',
+492 silly addNameRange     '9.0.3',
+492 silly addNameRange     '9.0.4',
+492 silly addNameRange     '9.0.5',
+492 silly addNameRange     '9.0.6',
+492 silly addNameRange     '9.0.7',
+492 silly addNameRange     '9.0.8',
+492 silly addNameRange     '10.0.0',
+492 silly addNameRange     '10.1.0',
+492 silly addNameRange     '10.1.1',
+492 silly addNameRange     '10.1.2',
+492 silly addNameRange     '10.1.3',
+492 silly addNameRange     '10.2.0',
+492 silly addNameRange     '10.2.1',
+492 silly addNameRange     '10.2.3',
+492 silly addNameRange     '10.2.4',
+492 silly addNameRange     '10.2.5',
+492 silly addNameRange     '10.2.6',
+492 silly addNameRange     '11.0.0',
+492 silly addNameRange     '11.0.1',
+492 silly addNameRange     '11.1.0',
+492 silly addNameRange     '11.2.0',
+492 silly addNameRange     '12.0.0',
+492 silly addNameRange     '12.0.1' ] ]
+493 verbose addNamed [ 'browserify', '12.0.1' ]
+494 verbose addNamed [ '12.0.1', '12.0.1' ]
+495 silly lockFile 8ed522c4-browserify-12-0-1 browserify@12.0.1
+496 verbose lock browserify@12.0.1 /Users/ben/.npm/8ed522c4-browserify-12-0-1.lock
+497 silly lockFile a5bb3c5a-browserify-browserify-12-0-1-tgz https://registry.npmjs.org/browserify/-/browserify-12.0.1.tgz
+498 verbose lock https://registry.npmjs.org/browserify/-/browserify-12.0.1.tgz /Users/ben/.npm/a5bb3c5a-browserify-browserify-12-0-1-tgz.lock
+499 verbose addRemoteTarball [ 'https://registry.npmjs.org/browserify/-/browserify-12.0.1.tgz',
+499 verbose addRemoteTarball   '2e0bd015384ed07feaac5b6466bd582c5085ec3e' ]
+500 info retry fetch attempt 1 at 21:08:43
+501 verbose fetch to= /var/folders/v9/450sq__16x7023ybxly016hr0000gn/T/npm-9636-h0i_XzTI/registry.npmjs.org/browserify/-/browserify-12.0.1.tgz
+502 http GET https://registry.npmjs.org/browserify/-/browserify-12.0.1.tgz
+503 silly lockFile 29186be1-npmjs-org-react-react-0-14-2-tgz https://registry.npmjs.org/react/-/react-0.14.2.tgz
+504 silly lockFile 29186be1-npmjs-org-react-react-0-14-2-tgz https://registry.npmjs.org/react/-/react-0.14.2.tgz
+505 silly lockFile 1d6440e1-react-0-14-2 react@0.14.2
+506 silly lockFile 1d6440e1-react-0-14-2 react@0.14.2
+507 silly lockFile 7f93a2de-react-0-14-1 react@^0.14.1
+508 silly lockFile 7f93a2de-react-0-14-1 react@^0.14.1
+509 http 200 https://registry.npmjs.org/browserify/-/browserify-12.0.1.tgz
+510 silly lockFile a5bb3c5a-browserify-browserify-12-0-1-tgz https://registry.npmjs.org/browserify/-/browserify-12.0.1.tgz
+511 silly lockFile a5bb3c5a-browserify-browserify-12-0-1-tgz https://registry.npmjs.org/browserify/-/browserify-12.0.1.tgz
+512 silly lockFile 8ed522c4-browserify-12-0-1 browserify@12.0.1
+513 silly lockFile 8ed522c4-browserify-12-0-1 browserify@12.0.1
+514 silly lockFile f062ed26-browserify-12-0-1 browserify@^12.0.1
+515 silly lockFile f062ed26-browserify-12-0-1 browserify@^12.0.1
+516 error Error: EACCES, mkdir '/Users/ben/.npm/_git-remotes/git-github-com-twbs-bootstrap-git-a03500bb'
+516 error  { [Error: EACCES, mkdir '/Users/ben/.npm/_git-remotes/git-github-com-twbs-bootstrap-git-a03500bb']
+516 error   errno: 3,
+516 error   code: 'EACCES',
+516 error   path: '/Users/ben/.npm/_git-remotes/git-github-com-twbs-bootstrap-git-a03500bb',
+516 error   parent: 'heatwatch' }
+517 error Please try running this command again as root/Administrator.
+518 error System Darwin 15.0.0
+519 error command "node" "/usr/local/bin/npm" "install"
+520 error cwd /Users/ben/Documents/Code/javascripts/is_it_colder
+521 error node -v v0.10.33
+522 error npm -v 1.4.28
+523 error path /Users/ben/.npm/_git-remotes/git-github-com-twbs-bootstrap-git-a03500bb
+524 error code EACCES
+525 error errno 3
+526 error stack Error: EACCES, mkdir '/Users/ben/.npm/_git-remotes/git-github-com-twbs-bootstrap-git-a03500bb'
+527 verbose exit [ 3, true ]
