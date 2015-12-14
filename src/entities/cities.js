@@ -44,7 +44,7 @@ var defaults = [{
 },
 {
     name: 'Los Angeles',
-    id: 5352423
+    id: 5368361
 },
 {
     name: 'San Francisco',
@@ -52,7 +52,7 @@ var defaults = [{
 },
 {
     name: 'Chicago',
-    id: 4904381
+    id: 4887398
 },
 {
     name: 'Houston',
@@ -63,16 +63,16 @@ var defaults = [{
     id: 5308655
 },
 {
-    name: 'Detroit',
-    id:  5007247
+    name: 'Saint Louis',
+    id:  4407066
 },
 {
     name: 'Washington, DC',
-    id: 4138106
+    id: 4140963
 },
 {
     name: 'Anchorage',
-    id: 5876855
+    id: 5879400
 },
 {
     name: 'Miami',
