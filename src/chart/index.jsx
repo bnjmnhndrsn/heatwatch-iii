@@ -11,10 +11,20 @@ var channel = Backbone.Radio.channel('global');
 
 var View = Marionette.ItemView.extend({
     template: false,
+    collectionEvents: {
+        'sync': 'renderChart'
+    },
     onShow: function(){
+        this.collection.fetch({
+            jsonp: "callback",
+            dataType: "jsonp"
+        });
+        this.renderChart();
+    },
+    renderChart: function(){
         var collection = this.collection;
         ReactDOM.render(
-            <Chart />,
+            <Chart collection={this.collection} />,
             this.$el.get(0)
         );
     }
@@ -23,7 +33,9 @@ var View = Marionette.ItemView.extend({
 
 var ChartController = Marionette.Object.extend({
     initialize: function(){
-        var view = new View();
+        var view = new View({
+            collection: channel.request('get:cities')
+        });
         channel.request('show:view', view);
     }
 });

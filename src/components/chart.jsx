@@ -10,7 +10,7 @@ var ChartItem = React.createClass({
     render: function(){
         return (
             <tr>
-                <td>{this.props.model.get('city')}</td>
+                <td>{this.props.model.get('name')}</td>
                 <td>{this.props.model.getTemperature()}</td>
             </tr>
         )
@@ -18,15 +18,8 @@ var ChartItem = React.createClass({
 });
 
 var Chart = React.createClass({
-    getInitialState: function(){
-        var collection = channel.request('get:cities', 10);
-        collection.fetch();
-        return {
-            collection: collection
-        };
-    },
     render: function() {
-        var items = this.state.collection.map(function(model, i) {
+        var items = this.props.collection.map(function(model, i) {
             return (
                 <ChartItem model={model} key={i} />
             )
