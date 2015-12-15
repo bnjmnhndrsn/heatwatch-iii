@@ -2,16 +2,12 @@
 var React = require('react');
 var Backbone = require('backbone');
 
-// App
-var channel = Backbone.Radio.channel('global');
-
-
 var ChartItem = React.createClass({
     render: function(){
         return (
             <tr>
-                <td>{this.props.model.get('name')}</td>
-                <td>{this.props.model.getTemperature()}</td>
+                <td>{this.props.name}</td>
+                <td>{this.props.temperature}</td>
             </tr>
         )
     }
@@ -19,9 +15,9 @@ var ChartItem = React.createClass({
 
 var Chart = React.createClass({
     render: function() {
-        var items = this.props.collection.map(function(model, i) {
+        var items = this.props.items.map(function(item, i) {
             return (
-                <ChartItem model={model} key={i} />
+                <ChartItem {...item} key={i} />
             )
         });
 

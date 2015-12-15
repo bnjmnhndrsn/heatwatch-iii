@@ -1,31 +1,14 @@
 // Dependencies
 var $ = require('jquery');
-var Backbone = require('backbone');
-var Marionette = require('backbone.marionette')
-require('backbone.radio');
+var React = require('react');
+var ReactDOM = require('react-dom');
 
-//App
-require('./entities/cities');
-require('./entities/user');
-var channel = Backbone.Radio.channel('global');
-var Chart = require('./chart');
-
-var app = new Marionette.Application();
-
-app.on('start', function(){
-	Backbone.history.start();
-
-	var rm = new Marionette.RegionManager({
-		regions: { "app": "#app" }
-	});
-
-	channel.reply('show:view', function(view){
-		rm.get('app').show(view);
-	});
-
-	var chart = new Chart();
-});
+var store = require('./store/store');
+var Heatwatch = require('./components/heatwatch');
 
 $(function(){
-	app.start();
+	ReactDOM.render(
+		<Heatwatch />,
+		document.getElementById('app')
+	);
 });

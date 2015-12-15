@@ -1,3 +1,4 @@
+var _ = require('underscore');
 var Backbone = require('backbone');
 
 var channel = Backbone.Radio.channel('global');
@@ -20,6 +21,11 @@ var City = Backbone.Model.extend({
     },
 	getTemperature: function(){
 		return (this.get('main') || {}).temp || 'N/A';
+	},
+	toJSON: function(){
+		var attrs = _.clone(this.attributes);
+		attrs.temperature = this.getTemperature();
+		return attrs;
 	}
 });
 
@@ -38,53 +44,7 @@ var Cities = Backbone.Collection.extend({
 	}
 });
 
-var defaults = [{
-    name: 'New York',
-    id: 5128581
-},
-{
-    name: 'Los Angeles',
-    id: 5368361
-},
-{
-    name: 'San Francisco',
-    id: 5391959
-},
-{
-    name: 'Chicago',
-    id: 4887398
-},
-{
-    name: 'Houston',
-    id: 4699066
-},
-{
-    name: 'Phoenix',
-    id: 5308655
-},
-{
-    name: 'Saint Louis',
-    id:  4407066
-},
-{
-    name: 'Washington, DC',
-    id: 4140963
-},
-{
-    name: 'Anchorage',
-    id: 5879400
-},
-{
-    name: 'Miami',
-    id: 4164138
-}];
-
-var cities = new Cities(defaults);
-
-channel.reply('get:city', function(){
-	return new City;
-});
-
-channel.reply('get:cities', function(){
-	return cities;
-});
+module.exports = {
+	City: City,
+	Cities: Cities
+};
