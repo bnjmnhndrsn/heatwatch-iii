@@ -49,7 +49,7 @@ var defaults = [{
 var cities = new Cities(defaults);
 
 cities.on('sync', function(){
-    channel.trigger('items:change', cities.toJSON());
+    channel.trigger('items:change', cities.toJSON(location));
 });
 
 channel.reply('items:sync', function(){
@@ -60,5 +60,20 @@ channel.reply('items:sync', function(){
 });
 
 channel.reply('items:get', function(){
-	return cities.toJSON();
+	return cities.toJSON(location);
+});
+
+var location = new City();
+
+location.on('change', function(){
+    location.fetch({
+        jsonp: "callback",
+        dataType: "jsonp"
+    }).done(function(){
+        channel.trigger('items:change', cities.toJSON(location));
+    });
+});
+
+channel.reply('location:set', function(position){
+    location.set(position);
 });

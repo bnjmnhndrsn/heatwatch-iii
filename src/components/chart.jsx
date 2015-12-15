@@ -7,7 +7,8 @@ var ChartItem = React.createClass({
         return (
             <tr>
                 <td>{this.props.name}</td>
-                <td>{this.props.temperature}</td>
+                <td>{this.props.temperature ? this.props.temperature : 'N/A'}</td>
+                <td>{this.props.difference ? this.props.difference : 'N/A'}</td>
             </tr>
         )
     }
@@ -27,6 +28,7 @@ var Chart = React.createClass({
                     <tr>
                         <th>City</th>
                         <th>Current Temperature</th>
+                        <th>Difference</th>
                     </tr>
                 </thead>
                 <tbody>
