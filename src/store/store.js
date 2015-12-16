@@ -1,3 +1,4 @@
+var _ = require('underscore');
 var Backbone = require('backbone');
 var Radio = require('backbone.radio');
 var channel = Radio.channel('global');
@@ -60,7 +61,12 @@ channel.reply('items:sync', function(){
 });
 
 channel.reply('items:get', function(){
-	return cities.toJSON(location);
+	return cities.map(function(model){
+        var attrs = model.toJSON();
+        attrs.temperature = model.getTemperature();
+        attrs.difference = location ? attrs.temperature - location.getTemperature() : null;
+        return attrs;
+    });
 });
 
 var location = new City();
@@ -70,7 +76,7 @@ location.on('change', function(){
         jsonp: "callback",
         dataType: "jsonp"
     }).done(function(){
-        channel.trigger('items:change', cities.toJSON(location));
+        channel.trigger('items:change', channel.request('items:get'));
     });
 });
 
