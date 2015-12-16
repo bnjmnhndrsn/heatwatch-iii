@@ -2,25 +2,44 @@
 var React = require('react');
 var Backbone = require('backbone');
 
-var ChartItem = React.createClass({
+var PendingItem = React.createClass({
     render: function(){
         return (
             <tr>
                 <td>{this.props.name}</td>
                 <td>{this.props.temperature ? this.props.temperature : 'N/A'}</td>
-                <td>{this.props.difference ? this.props.difference : 'N/A'}</td>
             </tr>
         )
     }
 });
 
+var LoadedItem = React.createClass({
+    render: function(){
+        var difference = this.props.temperature - this.props.location.temperature;
+        
+        return (
+            <tr>
+                <td>{this.props.name}</td>
+                <td>{this.props.temperature}</td>
+                <td>{difference}</td>
+            </tr>
+        )
+    }
+})
+
 var Chart = React.createClass({
     render: function() {
+        var location = this.props.location;
+        
         var items = this.props.items.map(function(item, i) {
-            return (
-                <ChartItem {...item} key={i} />
-            )
+            if (item.temperature && !!location.temperature) {
+                return (<LoadedItem  {...item} location={location} key={i} />);
+            } else {
+                return (<PendingItem {...item} key={i} />)
+            }
         });
+        
+        var differenceHeader = !!location.temperature ? (<th>Difference</th>) : undefined;
 
         return (
             <table>
@@ -28,7 +47,7 @@ var Chart = React.createClass({
                     <tr>
                         <th>City</th>
                         <th>Current Temperature</th>
-                        <th>Difference</th>
+                        {differenceHeader}
                     </tr>
                 </thead>
                 <tbody>

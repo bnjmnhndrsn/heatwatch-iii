@@ -61,25 +61,22 @@ channel.reply('items:sync', function(){
 });
 
 channel.reply('items:get', function(){
-	return cities.map(function(model){
-        var attrs = model.toJSON();
-        attrs.temperature = model.getTemperature();
-        attrs.difference = location ? attrs.temperature - location.getTemperature() : null;
-        return attrs;
-    });
+    return cities.toJSON();
 });
 
 var location = new City();
 
-location.on('change', function(){
-    location.fetch({
-        jsonp: "callback",
-        dataType: "jsonp"
-    }).done(function(){
-        channel.trigger('items:change', channel.request('items:get'));
-    });
+location.on('sync', function(){
+    channel.trigger('location:change', location.toJSON());
+});
+
+channel.reply('location:get', function(){
+    return location.toJSON();
 });
 
 channel.reply('location:set', function(position){
-    location.set(position);
+    location.set(position).fetch({
+        jsonp: "callback",
+        dataType: "jsonp"
+    });
 });

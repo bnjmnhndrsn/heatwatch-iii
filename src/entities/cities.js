@@ -22,6 +22,12 @@ var Location = Backbone.Model.extend({
 	url: 'http://api.openweathermap.org/data/2.5/weather',
 	getTemperature: function(){
 		return (this.get('main') || {}).temp;
+	},
+	toJSON: function(){
+		return {
+			temperature: this.getTemperature(),
+			name: this.get('name')
+		};
 	}
 });
 

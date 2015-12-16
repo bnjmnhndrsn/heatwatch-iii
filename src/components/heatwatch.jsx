@@ -10,20 +10,25 @@ var Chart = require('./chart');
 var Heatwatch = React.createClass({
     getInitialState: function() {
         return {
-            items: channel.request('items:get')
-        }
+            items: channel.request('items:get'),
+            location: channel.request('location:get')
+        };
     },
     componentDidMount: function() {
         channel.request('items:sync');
-        channel.on('items:change', this._onChange)
+        channel.on('items:change', this._onItemsChange);
+        channel.on('location:change', this._onLocationChange);
     },
     render: function(){
         return (
-            <Chart items={this.state.items} />
+            <Chart items={this.state.items} location={this.state.location} />
         )
     },
-    _onChange: function(items){
+    _onItemsChange: function(items){
         this.setState({items: items});
+    },
+    _onLocationChange: function(location){
+        this.setState({location: location});
     }
 });
 
