@@ -1,25 +1,34 @@
+// Dependencies
 var $ = require('jquery');
 var _ = require('underscore');
 var Backbone = require('backbone');
 
+var settings = require('../settings');
 var channel = Backbone.Radio.channel('global');
-var data = require('../data/cities');
 
-var fakeCityRoot = "fake/city.json";
-var fakeCitiesRoot = "fake/sample.json";
 
-var data = {
+var defaultData = {
 	units: 'imperial',
 	appid: 'd73f855b0258663c804c24680fe8b248'
 };
 
+var defaultOptions = settings.DEBUG ? {} : {
+    jsonp: "callback",
+    dataType: "jsonp"
+};
+
 var Location = Backbone.Model.extend({
 	fetch: function(options){
-		options = options || {};
-		options.data = _.extend(data, options.data);
+		options = _.extend({}, defaultOptions, options);
+		options.data = _.extend({}, defaultData, options.data);
 		return Backbone.Model.prototype.fetch.call(this, options);
 	},
-	url: 'http://api.openweathermap.org/data/2.5/weather',
+	url: function(){
+		if (settings.DEBUG) {
+			return '/fake/location.json';
+		}
+		return 'http://api.openweathermap.org/data/2.5/weather';
+	},
 	getTemperature: function(){
 		return (this.get('main') || {}).temp;
 	},
@@ -33,10 +42,15 @@ var Location = Backbone.Model.extend({
 
 var Locations = Backbone.Collection.extend({
 	model: Location,
-	url: 'http://api.openweathermap.org/data/2.5/group',
+	url: function(){
+		if (settings.DEBUG) {
+			return '/fake/cities.json';
+		}
+		return 'http://api.openweathermap.org/data/2.5/group';
+	},
 	fetch: function(options){
-		options = options || {};
-		options.data = _.extend(data, {
+		options = _.extend({}, defaultOptions, options);
+		options.data = _.extend({}, defaultData, {
 			id: this.pluck('id').join(',')
 		}, options.data);
 		return Backbone.Collection.prototype.fetch.call(this, options);
