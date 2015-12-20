@@ -20,7 +20,13 @@ var defaultOptions = settings.DEBUG ? {} : {
 var Location = Backbone.Model.extend({
 	fetch: function(options){
 		options = _.extend({}, defaultOptions, options);
-		options.data = _.extend({}, defaultData, options.data);
+		var data; 
+		if (this.has('lat') && this.has('lon')) {
+			data = this.pick('lat', 'lon');
+		} else if (this.has('zip')) {
+			data = this.pick('zip');
+		}
+		options.data = _.extend({}, defaultData, data, options.data);
 		return Backbone.Model.prototype.fetch.call(this, options);
 	},
 	url: function(){
