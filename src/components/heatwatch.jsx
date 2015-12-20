@@ -6,6 +6,7 @@ var Radio = require('backbone.radio');
 // App
 var channel = Radio.channel('global');
 var Chart = require('./chart');
+var Input = require('./input');
 
 var Heatwatch = React.createClass({
     getInitialState: function() {
@@ -21,8 +22,11 @@ var Heatwatch = React.createClass({
     },
     render: function(){
         return (
-            <Chart items={this.state.items} location={this.state.location} />
-        )
+            <div>
+                <Input />
+                <Chart items={this.state.items} location={this.state.location} />
+            </div>
+        );
     },
     _onItemsChange: function(items){
         this.setState({items: items});
