@@ -1,5 +1,5 @@
 module.exports = {
-    DEBUG: false,
+    DEBUG: true,
     defaultCities: [{
         name: 'New York',
         id: 5128581

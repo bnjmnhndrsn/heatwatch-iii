@@ -26,7 +26,10 @@ channel.reply('items:get', function(){
 var location = new City();
 
 location.on('sync', function(){
-    channel.trigger('location:change', location.toJSON());
+    channel.trigger('location:change', _.extend(
+        location.toJSON(),
+        {isLoading: false}
+    ));
 });
 
 channel.reply('location:get', function(){
@@ -35,4 +38,8 @@ channel.reply('location:get', function(){
 
 channel.reply('location:set', function(position){
     location.set(position).fetch();
+    channel.trigger('location:change', _.extend(
+        location.toJSON(),
+        {isLoading: true}
+    ));
 });

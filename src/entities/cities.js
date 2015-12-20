@@ -25,6 +25,8 @@ var Location = Backbone.Model.extend({
 			data = this.pick('lat', 'lon');
 		} else if (this.has('zip')) {
 			data = this.pick('zip');
+		} else {
+			throw new Error('Location must have a latitude, longitude or zip code');
 		}
 		options.data = _.extend({}, defaultData, data, options.data);
 		return Backbone.Model.prototype.fetch.call(this, options);
@@ -41,7 +43,8 @@ var Location = Backbone.Model.extend({
 	toJSON: function(){
 		return {
 			temperature: this.getTemperature(),
-			name: this.get('name')
+			name: this.get('name'),
+			id: this.get('id')
 		};
 	}
 });

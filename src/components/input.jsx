@@ -9,23 +9,49 @@ var inputChannel = Radio.channel('input');
 var settings = require('../settings');
 
 var InputForm = React.createClass({
+    getInitialState: function() {
+        return {
+            location: channel.request('location:get')
+        };
+    },
+    componentDidMount: function() {
+        channel.on('location:change', this._setLocationState);
+    },
+    _onSearch: function(){
+        this.setState({
+            isLoading: true
+        });
+    },
+    _setLocationState: function(location) {
+        this.setState({
+            location: location,
+            isLoading: !!location.isLoading
+        });
+    },
     render: function(){
+        if (this.state.isLoading) {
+            return (<div>Loading...</div>);
+        } else if (this.state.location.id) {
+            return (<div>Location Set!</div>);
+        }
         return (
             <div>
-                <ZipCodeInput />
-                <LocationButton />
+                <ZipCodeInput onSearch={this._onSearch} />
+                <LocationButton onSearch={this._onSearch} />
             </div>
         );
-    }
+    },
+    
 });
 
 var ZipCodeInput = React.createClass({
     getInitialState: function() {
         return {zip: ''};
     },
-    _onSubmit: function(e){
+    _handleSubmit: function(e){
         e.preventDefault();
         var zip = this.state.zip.trim();
+        this.props.onSearch();
         channel.request('location:set', {
             zip: zip
         });
@@ -35,7 +61,7 @@ var ZipCodeInput = React.createClass({
     },
     render: function(){
         return (
-            <form onSubmit={this._onSubmit}>
+            <form onSubmit={this._handleSubmit}>
                 <input 
                     type="text" 
                     name="zip" 
@@ -50,8 +76,9 @@ var ZipCodeInput = React.createClass({
 });
 
 var LocationButton = React.createClass({
-    _onClick: function(e){
+    _handleClick: function(e){
         e.preventDefault();
+        this.props.onSearch();
         if (settings.DEBUG) {
         	channel.request('location:set', {
         		lat: 0,
@@ -67,7 +94,7 @@ var LocationButton = React.createClass({
         }
     },
     render: function(){
-        return (<button type="button" onClick={this._onClick}>Find my location</button>);
+        return (<button type="button" onClick={this._handleClick}>Find my location</button>);
     }
 });
 
