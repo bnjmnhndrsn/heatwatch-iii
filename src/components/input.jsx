@@ -11,12 +11,19 @@ var settings = require('../settings');
 var InputForm = React.createClass({
     getInitialState: function() {
         return {
+            editable: true,
+            isLoading: false,
             location: channel.request('location:get')
         };
     },
     componentDidMount: function() {
         channel.on('location:change', this._setLocationState);
     },
+    _edit: function(){
+        this.setState({
+            editable: true
+        });
+    },  
     _onSearch: function(){
         this.setState({
             isLoading: true
@@ -25,14 +32,18 @@ var InputForm = React.createClass({
     _setLocationState: function(location) {
         this.setState({
             location: location,
+            editable: !!location.isLoading || !location.id,
             isLoading: !!location.isLoading
         });
     },
     render: function(){
         if (this.state.isLoading) {
             return (<div>Loading...</div>);
-        } else if (this.state.location.id) {
-            return (<div>Location Set!</div>);
+        } else if (!this.state.editable) {
+            return (<div>
+                Location Set!
+                <button type="button" onClick={this._edit}>Edit</button>
+            </div>);
         }
         return (
             <div>
