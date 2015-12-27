@@ -4,8 +4,6 @@ var _ = require('underscore');
 var Backbone = require('backbone');
 
 var settings = require('../settings');
-var channel = Backbone.Radio.channel('global');
-
 
 var defaultData = {
 	units: 'imperial',

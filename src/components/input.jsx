@@ -1,23 +1,21 @@
 // Dependencies
 var React = require('react');
-var Backbone = require('backbone');
-var Radio = require('backbone.radio');
 
 // App
-var channel = Radio.channel('global');
-var inputChannel = Radio.channel('input');
 var settings = require('../settings');
+var LocationActions = require('../actions/location-actions');
+var LocationStore = require('../stores/location-store');
 
 var InputForm = React.createClass({
     getInitialState: function() {
         return {
             editable: true,
             isLoading: false,
-            location: channel.request('location:get')
+            location: LocationStore.get()
         };
     },
     componentDidMount: function() {
-        channel.on('location:change', this._setLocationState);
+        LocationStore.addListener(this._setLocationState);
     },
     _edit: function(){
         this.setState({
@@ -29,11 +27,14 @@ var InputForm = React.createClass({
             isLoading: true
         });
     },
-    _setLocationState: function(location) {
+    _setLocationState: function () {
+        var location = LocationStore.get();
+        var isLoading = LocationStore.isFetching();
+        
         this.setState({
             location: location,
-            editable: !!location.isLoading || !location.id,
-            isLoading: !!location.isLoading
+            editable: !!isLoading || !location.id,
+            isLoading: !!isLoading
         });
     },
     render: function(){
@@ -63,7 +64,7 @@ var ZipCodeInput = React.createClass({
         e.preventDefault();
         var zip = this.state.zip.trim();
         this.props.onSearch();
-        channel.request('location:set', {
+        LocationActions.fetch({
             zip: zip
         });
     },
@@ -91,13 +92,13 @@ var LocationButton = React.createClass({
         e.preventDefault();
         this.props.onSearch();
         if (settings.DEBUG) {
-        	channel.request('location:set', {
+        	LocationActions.fetch({
         		lat: 0,
         		lon: 0
         	});
         } else {
         	navigator.geolocation.getCurrentPosition(function(position){
-        		channel.request('location:set', {
+        		LocationActions.fetch({
         			lat: position.coords.latitude,
         			lon: position.coords.longitude
         		});

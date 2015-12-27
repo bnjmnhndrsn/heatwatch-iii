@@ -1,12 +1,11 @@
 // Dependencies
 var React = require('react');
-var Backbone = require('backbone');
-var Radio = require('backbone.radio');
 
 // App
-var channel = Radio.channel('global');
 var CityActions = require('../actions/city-actions');
 var CityStore = require('../stores/city-store');
+var LocationAction = require('../actions/location-actions');
+var LocationStore = require('../stores/location-store');
 var Chart = require('./chart');
 var Input = require('./input');
 
@@ -14,13 +13,13 @@ var Heatwatch = React.createClass({
     getInitialState: function() {
         return {
             items: CityStore.all(),
-            location: channel.request('location:get')
+            location: LocationStore.get()
         };
     },
     componentDidMount: function() {
         CityActions.fetch();
-        CityStore.addListener(this._onItemsChange);
-        channel.on('location:change', this._onLocationChange);
+        CityStore.addListener(this._onCitiesChange);
+        LocationStore.addListener(this._onLocationChange)
     },
     render: function(){
         return (
@@ -30,11 +29,11 @@ var Heatwatch = React.createClass({
             </div>
         );
     },
-    _onItemsChange: function(){
+    _onCitiesChange: function(){
         this.setState({items: CityStore.all()});
     },
-    _onLocationChange: function(location){
-        this.setState({location: location});
+    _onLocationChange: function(){
+        this.setState({location: LocationStore.get()});
     }
 });
 
