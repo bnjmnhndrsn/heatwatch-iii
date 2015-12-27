@@ -7,6 +7,9 @@ var ReactDOM = require('react-dom');
 var Heatwatch = require('./components/heatwatch');
 var settings = require('./settings');
 
+// Styles
+require('!style!css!sass!./stylesheets/app.scss');
+
 $(function(){
 	ReactDOM.render(
 		<Heatwatch />,

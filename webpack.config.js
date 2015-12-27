@@ -1,3 +1,5 @@
+var path = require('path');
+
 module.exports = {
   context: __dirname,
   entry: "./src/app.jsx",
@@ -6,7 +8,8 @@ module.exports = {
     filename: "app.js"
   },
   resolve: {
-    extensions: ["", ".js", ".jsx"]
+    extensions: ["", ".js", ".jsx"],
+    fallback: path.join(__dirname, "node_modules")
   },
   module: {
     loaders: [
@@ -19,10 +22,17 @@ module.exports = {
         }
       },
       {
+        test: /\.scss$/,
+        loader: 'style!css!sass',
+        exclude: /(node_modules)/
+      },
+      {
         test: /\.node$/,
         loader: "node-loader"
-      }
+      },
+      { test: /\.(png|woff|woff2|eot|ttf|svg)$/, loader: 'url-loader?limit=100000' }
     ]
   },
-  devtool: 'source-maps'
+  devtool: 'source-maps',
+  resolveLoader: { root: path.join(__dirname, "node_modules") }
 };
