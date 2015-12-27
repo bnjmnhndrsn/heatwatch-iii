@@ -6,7 +6,7 @@ var Backbone = require('backbone');
 var Radio = require('backbone.radio');
 
 // App
-var appStore = require('./store/app');
+var appStore = require('./stores/app');
 var Heatwatch = require('./components/heatwatch');
 var settings = require('./settings');
 

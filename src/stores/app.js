@@ -11,18 +11,6 @@ var Cities = require('../entities/cities').Cities;
 
 var cities = new Cities(settings.defaultCities);
 
-cities.on('sync', function(){
-    channel.trigger('items:change', cities.toJSON(location));
-});
-
-channel.reply('items:sync', function(){
-    cities.fetch();
-});
-
-channel.reply('items:get', function(){
-    return cities.toJSON();
-});
-
 var location = new City();
 
 location.on('sync', function(){
