@@ -40828,10 +40828,15 @@
 	var LocationConstants = __webpack_require__(190);
 	
 	var LocationActions = {
-	    fetch: function (data) {
+	    fetchFromZip: function (zip) {
 	        Dispatcher.dispatch({
-	            actionType: LocationConstants.FETCH,
-	            data: data
+	            actionType: LocationConstants.FETCH_FROM_ZIP,
+	            zip: zip
+	        });
+	    },
+	    fetchFromLocation: function () {
+	        Dispatcher.dispatch({
+	            actionType: LocationConstants.FETCH_FROM_LOCATION
 	        });
 	    }
 	};
@@ -40843,7 +40848,8 @@
 /***/ function(module, exports) {
 
 	module.exports = {
-	    FETCH: 'LOCATION_FETCH',
+	    FETCH_FROM_LOCATION: 'LOCATION_FETCH_FROM_LOCATION',
+	    FETCH_FROM_ZIP: 'LOCATION_FETCH_FROM_ZIP',
 	    SYNC: 'LOCATION_SYNC'
 	};
 
@@ -40881,8 +40887,11 @@
 	
 	LocationStore.__onDispatch = function (payload) {
 	    switch (payload.actionType) {
-	        case LocationConstants.FETCH:
-	            LocationStore._fetch(payload.data);
+	        case LocationConstants.FETCH_FROM_ZIP:
+	            LocationStore._fetchFromZip(payload.zip);
+	            break;
+	        case LocationConstants.FETCH_FROM_LOCATION:
+	            LocationStore._fetchFromLocation();
 	            break;
 	        case LocationConstants.SYNC:
 	            LocationStore._sync();
@@ -40890,8 +40899,27 @@
 	    }
 	};
 	
-	LocationStore._fetch = function (data) {
-	    _location.set(data).fetch();
+	LocationStore._fetchFromZip = function (zip) {
+	    _location.set('zip', zip).fetch();
+	    _isFetching = true;
+	    this.__emitChange();
+	};
+	
+	LocationStore._fetchFromLocation = function () {
+	    if (settings.DEBUG) {
+	        _location.set({
+	            lat: 0,
+	            lon: 0
+	        }).fetch();
+	    } else {
+	        navigator.geolocation.getCurrentPosition(function (position) {
+	            _location.set({
+	                lat: position.coords.latitude,
+	                lon: position.coords.longitude
+	            }).fetch();
+	        });
+	    }
+	
 	    _isFetching = true;
 	    this.__emitChange();
 	};
@@ -41033,7 +41061,7 @@
 	    getInitialState: function () {
 	        return {
 	            editable: true,
-	            isLoading: false,
+	            isLoading: LocationStore.isFetching(),
 	            location: LocationStore.get()
 	        };
 	    },
@@ -41043,11 +41071,6 @@
 	    _edit: function () {
 	        this.setState({
 	            editable: true
-	        });
-	    },
-	    _onSearch: function () {
-	        this.setState({
-	            isLoading: true
 	        });
 	    },
 	    _setLocationState: function () {
@@ -41082,8 +41105,8 @@
 	        return React.createElement(
 	            'div',
 	            null,
-	            React.createElement(ZipCodeInput, { onSearch: this._onSearch }),
-	            React.createElement(LocationButton, { onSearch: this._onSearch })
+	            React.createElement(ZipCodeInput, null),
+	            React.createElement(LocationButton, null)
 	        );
 	    }
 	
@@ -41098,10 +41121,7 @@
 	    _handleSubmit: function (e) {
 	        e.preventDefault();
 	        var zip = this.state.zip.trim();
-	        this.props.onSearch();
-	        LocationActions.fetch({
-	            zip: zip
-	        });
+	        LocationActions.fetchFromZip(zip);
 	    },
 	    _onChange: function (e) {
 	        this.setState({ zip: e.target.value });
@@ -41131,20 +41151,7 @@
 	
 	    _handleClick: function (e) {
 	        e.preventDefault();
-	        this.props.onSearch();
-	        if (settings.DEBUG) {
-	            LocationActions.fetch({
-	                lat: 0,
-	                lon: 0
-	            });
-	        } else {
-	            navigator.geolocation.getCurrentPosition(function (position) {
-	                LocationActions.fetch({
-	                    lat: position.coords.latitude,
-	                    lon: position.coords.longitude
-	                });
-	            });
-	        }
+	        LocationActions.fetchFromLocation();
 	    },
 	    render: function () {
 	        return React.createElement(

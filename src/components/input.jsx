@@ -10,7 +10,7 @@ var InputForm = React.createClass({
     getInitialState: function() {
         return {
             editable: true,
-            isLoading: false,
+            isLoading: LocationStore.isFetching(),
             location: LocationStore.get()
         };
     },
@@ -22,11 +22,6 @@ var InputForm = React.createClass({
             editable: true
         });
     },  
-    _onSearch: function(){
-        this.setState({
-            isLoading: true
-        });
-    },
     _setLocationState: function () {
         var location = LocationStore.get();
         var isLoading = LocationStore.isFetching();
@@ -48,8 +43,8 @@ var InputForm = React.createClass({
         }
         return (
             <div>
-                <ZipCodeInput onSearch={this._onSearch} />
-                <LocationButton onSearch={this._onSearch} />
+                <ZipCodeInput />
+                <LocationButton />
             </div>
         );
     },
@@ -63,10 +58,7 @@ var ZipCodeInput = React.createClass({
     _handleSubmit: function(e){
         e.preventDefault();
         var zip = this.state.zip.trim();
-        this.props.onSearch();
-        LocationActions.fetch({
-            zip: zip
-        });
+        LocationActions.fetchFromZip(zip);
     },
     _onChange: function(e){
         this.setState({zip: e.target.value});
@@ -90,20 +82,7 @@ var ZipCodeInput = React.createClass({
 var LocationButton = React.createClass({
     _handleClick: function(e){
         e.preventDefault();
-        this.props.onSearch();
-        if (settings.DEBUG) {
-        	LocationActions.fetch({
-        		lat: 0,
-        		lon: 0
-        	});
-        } else {
-        	navigator.geolocation.getCurrentPosition(function(position){
-        		LocationActions.fetch({
-        			lat: position.coords.latitude,
-        			lon: position.coords.longitude
-        		});
-        	 });
-        }
+        LocationActions.fetchFromLocation();
     },
     render: function(){
         return (<button type="button" onClick={this._handleClick}>Find my location</button>);

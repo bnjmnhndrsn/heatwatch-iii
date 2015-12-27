@@ -12,7 +12,6 @@ var _isFetching = false;
 
 var LocationStore = new Store(Dispatcher);
 
-
 _location.on('sync', function(){
     Dispatcher.dispatch({
         actionType: LocationConstants.SYNC
@@ -29,8 +28,11 @@ LocationStore.isFetching = function(){
 
 LocationStore.__onDispatch = function(payload){
     switch (payload.actionType) {
-        case LocationConstants.FETCH:
-            LocationStore._fetch(payload.data);
+        case LocationConstants.FETCH_FROM_ZIP:
+            LocationStore._fetchFromZip(payload.zip);
+            break;
+        case LocationConstants.FETCH_FROM_LOCATION:
+            LocationStore._fetchFromLocation();
             break;
         case LocationConstants.SYNC:
             LocationStore._sync();
@@ -38,8 +40,27 @@ LocationStore.__onDispatch = function(payload){
     }
 };
 
-LocationStore._fetch = function(data){
-    _location.set(data).fetch();
+LocationStore._fetchFromZip = function(zip){
+    _location.set('zip', zip).fetch();
+    _isFetching = true;
+    this.__emitChange();
+};
+
+LocationStore._fetchFromLocation = function(){
+    if (settings.DEBUG) {
+        _location.set({
+            lat: 0,
+            lon: 0
+        }).fetch();
+    } else {
+        navigator.geolocation.getCurrentPosition(function(position){
+            _location.set({
+                lat: position.coords.latitude,
+                lon: position.coords.longitude
+            }).fetch();
+         });
+    }
+
     _isFetching = true;
     this.__emitChange();
 };

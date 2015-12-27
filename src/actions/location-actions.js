@@ -2,10 +2,15 @@ var Dispatcher = require('../dispatcher/dispatcher');
 var LocationConstants = require('../constants/location-constants')
 
 var LocationActions = {
-    fetch: function(data){
+    fetchFromZip: function(zip){
         Dispatcher.dispatch({
-            actionType: LocationConstants.FETCH,
-            data: data
+            actionType: LocationConstants.FETCH_FROM_ZIP,
+            zip: zip
+        });
+    },
+    fetchFromLocation: function(){
+        Dispatcher.dispatch({
+            actionType: LocationConstants.FETCH_FROM_LOCATION
         });
     }
 };
