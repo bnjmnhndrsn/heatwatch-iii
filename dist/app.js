@@ -35933,8 +35933,8 @@
 
 	// App
 	var channel = Radio.channel('global');
-	var LocationActions = __webpack_require__(169);
-	var LocationStore = __webpack_require__(175);
+	var CityActions = __webpack_require__(194);
+	var CityStore = __webpack_require__(196);
 	var Chart = __webpack_require__(192);
 	var Input = __webpack_require__(193);
 
@@ -35943,13 +35943,13 @@
 
 	    getInitialState: function () {
 	        return {
-	            items: LocationStore.all(),
+	            items: CityStore.all(),
 	            location: channel.request('location:get')
 	        };
 	    },
 	    componentDidMount: function () {
-	        LocationActions.fetch();
-	        LocationStore.addListener(this._onItemsChange);
+	        CityActions.fetch();
+	        CityStore.addListener(this._onItemsChange);
 	        channel.on('location:change', this._onLocationChange);
 	    },
 	    render: function () {
@@ -35961,7 +35961,7 @@
 	        );
 	    },
 	    _onItemsChange: function () {
-	        this.setState({ items: LocationStore.all() });
+	        this.setState({ items: CityStore.all() });
 	    },
 	    _onLocationChange: function (location) {
 	        this.setState({ location: location });
@@ -35971,23 +35971,7 @@
 	module.exports = Heatwatch;
 
 /***/ },
-/* 169 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var Dispatcher = __webpack_require__(170);
-	var LocationConstants = __webpack_require__(174);
-
-	var LocationActions = {
-	    fetch: function () {
-	        Dispatcher.dispatch({
-	            actionType: LocationConstants.FETCH
-	        });
-	    }
-	};
-
-	module.exports = LocationActions;
-
-/***/ },
+/* 169 */,
 /* 170 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -36303,69 +36287,8 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
 
 /***/ },
-/* 174 */
-/***/ function(module, exports) {
-
-	module.exports = {
-	    FETCH: 'LOCATIONS_FETCH',
-	    SYNC: 'LOCATIONS_SYNC'
-	};
-
-/***/ },
-/* 175 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var Store = __webpack_require__(176).Store;
-
-	// App
-	var settings = __webpack_require__(166);
-	var Dispatcher = __webpack_require__(170);
-	var Cities = __webpack_require__(167).Cities;
-	var LocationConstants = __webpack_require__(174);
-
-	var LocationStore = new Store(Dispatcher);
-	var cities = new Cities(settings.defaultCities);
-	var isFetching = false;
-
-	cities.on('sync', function () {
-	    Dispatcher.dispatch({
-	        actionType: LocationConstants.SYNC
-	    });
-	});
-
-	LocationStore.all = function () {
-	    return cities.toJSON();
-	};
-
-	LocationStore.isFetching = function () {
-	    return isFetching;
-	};
-
-	LocationStore.__onDispatch = function (payload) {
-	    switch (payload.actionType) {
-	        case LocationConstants.FETCH:
-	            LocationStore._fetch();
-	            break;
-	        case LocationConstants.SYNC:
-	            LocationStore._sync();
-	            break;
-	    }
-	};
-
-	LocationStore._fetch = function () {
-	    isFetching = true;
-	    this.__emitChange();
-	    cities.fetch();
-	};
-
-	LocationStore._sync = function () {
-	    isFetching = false;
-	    this.__emitChange();
-	};
-
-	module.exports = LocationStore;
-
-/***/ },
+/* 174 */,
+/* 175 */,
 /* 176 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -43006,6 +42929,86 @@
 	});
 
 	module.exports = InputForm;
+
+/***/ },
+/* 194 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var Dispatcher = __webpack_require__(170);
+	var CityConstants = __webpack_require__(195);
+
+	var CityActions = {
+	    fetch: function () {
+	        Dispatcher.dispatch({
+	            actionType: CityConstants.FETCH
+	        });
+	    }
+	};
+
+	module.exports = CityActions;
+
+/***/ },
+/* 195 */
+/***/ function(module, exports) {
+
+	module.exports = {
+	    FETCH: 'CITY_FETCH',
+	    SYNC: 'CITY_SYNC'
+	};
+
+/***/ },
+/* 196 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var Store = __webpack_require__(176).Store;
+
+	// App
+	var settings = __webpack_require__(166);
+	var Dispatcher = __webpack_require__(170);
+	var Cities = __webpack_require__(167).Cities;
+	var CityConstants = __webpack_require__(195);
+
+	var CityStore = new Store(Dispatcher);
+	var _cities = new Cities(settings.defaultCities);
+	var _isFetching = false;
+
+	_cities.on('sync', function () {
+	    Dispatcher.dispatch({
+	        actionType: CityConstants.SYNC
+	    });
+	});
+
+	CityStore.all = function () {
+	    return _cities.toJSON();
+	};
+
+	CityStore.isFetching = function () {
+	    return _isFetching;
+	};
+
+	CityStore.__onDispatch = function (payload) {
+	    switch (payload.actionType) {
+	        case CityConstants.FETCH:
+	            CityStore._fetch();
+	            break;
+	        case CityConstants.SYNC:
+	            CityStore._sync();
+	            break;
+	    }
+	};
+
+	CityStore._fetch = function () {
+	    _isFetching = true;
+	    this.__emitChange();
+	    _cities.fetch();
+	};
+
+	CityStore._sync = function () {
+	    _isFetching = false;
+	    this.__emitChange();
+	};
+
+	module.exports = CityStore;
 
 /***/ }
 /******/ ]);
