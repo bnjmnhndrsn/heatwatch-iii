@@ -50,16 +50,13 @@ var InputBlock = React.createClass({
 var LoadedLocation = React.createClass({
     render: function(){
         return (
-            <div className="col-md-12 form-inline">
-                <div className="form-group">
-                    <button 
-                        className="btn btn-primary" 
-                        type="button" 
-                        onClick={this.props.startEditing}
-                    >
-                        {this.props.location.name} 
-                    </button>
-                </div>
+            <div className="form col-md-6 col-md-offset-3 location-chosen">
+                <span>
+                    Your Location: <strong>{this.props.location.name}</strong>
+                </span>
+                <button type="button" className="btn-link btn location-chosen-button" onClick={this.props.startEditing}>
+                    <span className="glyphicon glyphicon-pencil"></span>    
+                </button>
             </div>
         );
     }
@@ -106,8 +103,8 @@ var InputForm = React.createClass({
                         <button className="btn btn-primary" type="submit">Search</button>
                     </div>
                 </div>
-              </form>
-        )
+             </form>
+        );
     }
 });
 

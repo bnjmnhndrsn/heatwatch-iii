@@ -41124,19 +41124,21 @@
 	    render: function () {
 	        return React.createElement(
 	            'div',
-	            { className: 'col-md-12 form-inline' },
+	            { className: 'form col-md-6 col-md-offset-3 location-chosen' },
 	            React.createElement(
-	                'div',
-	                { className: 'form-group' },
+	                'span',
+	                null,
+	                'Your Location: ',
 	                React.createElement(
-	                    'button',
-	                    {
-	                        className: 'btn btn-primary',
-	                        type: 'button',
-	                        onClick: this.props.startEditing
-	                    },
+	                    'strong',
+	                    null,
 	                    this.props.location.name
 	                )
+	            ),
+	            React.createElement(
+	                'button',
+	                { type: 'button', className: 'btn-link btn location-chosen-button', onClick: this.props.startEditing },
+	                React.createElement('span', { className: 'glyphicon glyphicon-pencil' })
 	            )
 	        );
 	    }
