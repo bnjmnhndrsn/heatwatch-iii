@@ -28873,12 +28873,51 @@
 	// App
 	var Hero = __webpack_require__(203);
 	var Header = __webpack_require__(204);
+	var Chart = __webpack_require__(192);
+	var LocationAction = __webpack_require__(189);
+	var LocationStore = __webpack_require__(191);
+	var CityActions = __webpack_require__(161);
+	var CityStore = __webpack_require__(167);
 	
 	var Heatwatch = React.createClass({
 	    displayName: 'Heatwatch',
 	
+	    getInitialState: function () {
+	        return {
+	            location: LocationStore.get(),
+	            cities: CityStore.all()
+	        };
+	    },
+	    componentDidMount: function () {
+	        CityActions.fetch();
+	        LocationStore.addListener(this._onLocationChange);
+	        CityStore.addListener(this._onCitiesChange);
+	    },
+	    _onLocationChange: function () {
+	        this.setState({
+	            location: LocationStore.get()
+	        });
+	    },
+	    _onCitiesChange: function () {
+	        this.setState({
+	            cities: CityStore.all()
+	        });
+	    },
 	    render: function () {
-	        return React.createElement(Hero, null);
+	        if (!!this.state.location.id) {
+	            return React.createElement(
+	                'div',
+	                null,
+	                React.createElement(Header, null),
+	                React.createElement(
+	                    'div',
+	                    { className: 'container' },
+	                    React.createElement(Chart, { location: this.state.location, items: this.state.cities })
+	                )
+	            );
+	        } else {
+	            return React.createElement(Hero, null);
+	        }
 	    }
 	});
 	
@@ -40918,12 +40957,6 @@
 	var React = __webpack_require__(2);
 	var _ = __webpack_require__(186);
 	
-	// Store
-	var CityActions = __webpack_require__(161);
-	var CityStore = __webpack_require__(167);
-	var LocationAction = __webpack_require__(189);
-	var LocationStore = __webpack_require__(191);
-	
 	var PendingItem = React.createClass({
 	    displayName: 'PendingItem',
 	
@@ -41000,27 +41033,10 @@
 	var Chart = React.createClass({
 	    displayName: 'Chart',
 	
-	    getInitialState: function () {
-	        return {
-	            items: CityStore.all(),
-	            location: LocationStore.get()
-	        };
-	    },
-	    componentDidMount: function () {
-	        CityActions.fetch();
-	        CityStore.addListener(this._onCitiesChange);
-	        LocationStore.addListener(this._onLocationChange);
-	    },
-	    _onCitiesChange: function () {
-	        this.setState({ items: CityStore.all() });
-	    },
-	    _onLocationChange: function () {
-	        this.setState({ location: LocationStore.get() });
-	    },
 	    render: function () {
-	        var location = this.state.location;
+	        var location = this.props.location;
 	
-	        var items = this.state.items.map(function (item, i) {
+	        var items = this.props.items.map(function (item, i) {
 	            if (item.temperature && !!location.temperature) {
 	                return React.createElement(LoadedItem, _extends({}, item, { location: location, key: i }));
 	            } else {
