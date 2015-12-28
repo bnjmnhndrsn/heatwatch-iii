@@ -1,6 +1,19 @@
 $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
 @import '../../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap';
 
+
+$app-blue: #2a8eb2;
+$app-red: #E44424;
+
+.hero-container {
+    margin-top: 100px;
+}
+
+.main-hero {
+    margin-top: 5px;
+    background-color: transparent;
+}
+
 .input-section {
     text-align: center;
     margin-top: 50px;
@@ -16,6 +29,8 @@ $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
     .geolocate-button {
         border-top: 1px $btn-default-border solid;
         border-bottom: 1px $btn-default-border solid;
+        background-color: white;
+        
     }
     
     .search-input {
@@ -29,16 +44,16 @@ $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
 
 .chart {
     .temperature-colder-3 {
-        background-color: #0086E5;
+        background-color: $app-blue;
         color: white;
     }
     
     .temperature-colder-2 {
-        background-color: #55AEED;
+        background-color: lighten($app-blue, 20%);
     }
     
     .temperature-colder-1 {
-        background-color: #AAD6F6;
+        background-color: lighten($app-blue, 40%);
     }
     
     .temperature-same {
@@ -46,14 +61,15 @@ $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
     }
     
     .temperature-warmer-3 {
-        background-color: #FF5905;
+        background-color: $app-red;
+        color: white;
     }
     
     .temperature-warmer-2 {
-        background-color: #FF9058;
+        background-color: lighten($app-red, 20%);
     }
     
     .temperature-warmer-1 {
-        background-color: #FFC7AB;
+        background-color: lighten($app-red, 40%);
     }
 }

@@ -23,14 +23,12 @@ var Heatwatch = React.createClass({
     },
     render: function(){
         return (
-            <div className="container">
-                <div className="row">
-                    <div className="col-md-12 text-center">
-                        <h1>Heatwatch III</h1>
-                    </div>
+            <div className="container-fluid hero-container">
+                <div className="jumbotron main-hero">
+                    <h1>Heatwatch III</h1>
+                    <p>Unseasonably warm? Unbearably cold? See who else in the country is getting off easy and who is suffering worse than you.</p>
+                    <Input />
                 </div>
-                <Input />
-                <Chart items={this.state.items} location={this.state.location} />
             </div>
         );
     },
