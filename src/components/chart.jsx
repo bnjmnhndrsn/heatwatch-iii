@@ -14,11 +14,29 @@ var PendingItem = React.createClass({
 });
 
 var LoadedItem = React.createClass({
+    _getClassName: function(difference){
+        if (difference <= -30) {
+            return 'temperature-colder-3';
+        } else if (difference <= -15) {
+            return 'temperature-colder-2';
+        } else if (difference <= -2) {
+            return 'temperature-colder-1'
+        } else if (difference <= 2) {
+            return 'temperature-same'
+        } else if (difference <= 15) {
+            return 'temperature-warmer-1'
+        } else if (difference <= 30) {
+            return 'temperature-warmer-2'
+        } else {
+            return 'temperature-warmer-3'
+        }
+    },
     render: function(){
         var difference = this.props.temperature - this.props.location.temperature;
+        var className = this._getClassName(difference);
         
         return (
-            <tr>
+            <tr className={className}>
                 <td>{this.props.name}</td>
                 <td>{this.props.temperature}</td>
                 <td>{difference}</td>
@@ -42,7 +60,7 @@ var Chart = React.createClass({
         var differenceHeader = !!location.temperature ? (<th>Difference</th>) : undefined;
 
         return (
-            <div className="col-md-12">
+            <div className="chart col-md-12">
                 <table className="table">
                     <thead>
                         <tr>

@@ -25,5 +25,35 @@ $icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
     .location-chosen {
 
     }
+}
 
+.chart {
+    .temperature-colder-3 {
+        background-color: #0086E5;
+        color: white;
+    }
+    
+    .temperature-colder-2 {
+        background-color: #55AEED;
+    }
+    
+    .temperature-colder-1 {
+        background-color: #AAD6F6;
+    }
+    
+    .temperature-same {
+        
+    }
+    
+    .temperature-warmer-3 {
+        background-color: #FF5905;
+    }
+    
+    .temperature-warmer-2 {
+        background-color: #FF9058;
+    }
+    
+    .temperature-warmer-1 {
+        background-color: #FFC7AB;
+    }
 }
