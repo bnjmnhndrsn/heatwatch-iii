@@ -64,7 +64,11 @@ var LoadedLocation = React.createClass({
 
 var LoadingIndicator = React.createClass({
     render: function(){
-        return <div className="col-md-12">Loading...</div>;
+        return (
+            <div className="form col-md-6 col-md-offset-3 location-chosen">
+                Loading...
+            </div>
+        );
     }
 });
 

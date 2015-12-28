@@ -35712,7 +35712,7 @@
 /***/ function(module, exports) {
 
 	module.exports = {
-	    DEBUG: true,
+	    DEBUG: false,
 	    defaultCities: [{
 	        name: 'New York',
 	        id: 5128581
@@ -41027,31 +41027,35 @@
 	        ) : undefined;
 	
 	        return React.createElement(
-	            'table',
-	            null,
+	            'div',
+	            { className: 'col-md-12' },
 	            React.createElement(
-	                'thead',
-	                null,
+	                'table',
+	                { className: 'table' },
 	                React.createElement(
-	                    'tr',
+	                    'thead',
 	                    null,
 	                    React.createElement(
-	                        'th',
+	                        'tr',
 	                        null,
-	                        'City'
-	                    ),
-	                    React.createElement(
-	                        'th',
-	                        null,
-	                        'Current Temperature'
-	                    ),
-	                    differenceHeader
+	                        React.createElement(
+	                            'th',
+	                            null,
+	                            'City'
+	                        ),
+	                        React.createElement(
+	                            'th',
+	                            null,
+	                            'Current Temperature'
+	                        ),
+	                        differenceHeader
+	                    )
+	                ),
+	                React.createElement(
+	                    'tbody',
+	                    null,
+	                    items
 	                )
-	            ),
-	            React.createElement(
-	                'tbody',
-	                null,
-	                items
 	            )
 	        );
 	    }
@@ -41150,7 +41154,7 @@
 	    render: function () {
 	        return React.createElement(
 	            'div',
-	            { className: 'col-md-12' },
+	            { className: 'form col-md-6 col-md-offset-3 location-chosen' },
 	            'Loading...'
 	        );
 	    }

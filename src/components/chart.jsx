@@ -42,18 +42,20 @@ var Chart = React.createClass({
         var differenceHeader = !!location.temperature ? (<th>Difference</th>) : undefined;
 
         return (
-            <table>
-                <thead>
-                    <tr>
-                        <th>City</th>
-                        <th>Current Temperature</th>
-                        {differenceHeader}
-                    </tr>
-                </thead>
-                <tbody>
-                    {items}
-                </tbody>
-            </table>
+            <div className="col-md-12">
+                <table className="table">
+                    <thead>
+                        <tr>
+                            <th>City</th>
+                            <th>Current Temperature</th>
+                            {differenceHeader}
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {items}
+                    </tbody>
+                </table>
+            </div>
         );
     }
 });
