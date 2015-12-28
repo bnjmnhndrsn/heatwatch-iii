@@ -2,6 +2,12 @@
 var React = require('react');
 var _ = require('underscore');
 
+// Store
+var CityActions = require('../actions/city-actions');
+var CityStore = require('../stores/city-store');
+var LocationAction = require('../actions/location-actions');
+var LocationStore = require('../stores/location-store');
+
 var PendingItem = React.createClass({
     render: function(){
         var temperature;
@@ -52,10 +58,27 @@ var LoadedItem = React.createClass({
 })
 
 var Chart = React.createClass({
+    getInitialState: function() {
+        return {
+            items: CityStore.all(),
+            location: LocationStore.get()
+        };
+    },
+    componentDidMount: function() {
+        CityActions.fetch();
+        CityStore.addListener(this._onCitiesChange);
+        LocationStore.addListener(this._onLocationChange);
+    },
+    _onCitiesChange: function(){
+        this.setState({items: CityStore.all()});
+    },
+    _onLocationChange: function(){
+        this.setState({location: LocationStore.get()});
+    },
     render: function() {
-        var location = this.props.location;
+        var location = this.state.location;
         
-        var items = this.props.items.map(function(item, i) {
+        var items = this.state.items.map(function(item, i) {
             if (item.temperature && !!location.temperature) {
                 return (<LoadedItem  {...item} location={location} key={i} />);
             } else {

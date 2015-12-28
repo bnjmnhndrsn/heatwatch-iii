@@ -43,14 +43,14 @@ var InputBlock = React.createClass({
             inner = <InputForm />
         }
 
-        return <div className="row input-section">{inner}</div>;
+        return <div className="input-section">{inner}</div>;
     }
 });
 
 var LoadedLocation = React.createClass({
     render: function(){
         return (
-            <div className="form col-md-6 col-md-offset-3 location-chosen">
+            <div className="location-chosen">
                 <span>
                     Your Location: <strong>{this.props.location.name}</strong>
                 </span>
@@ -90,7 +90,7 @@ var InputForm = React.createClass({
     },
     render: function(){
         return (
-            <form className="form col-md-6 col-md-offset-3" role="search" onSubmit={this._handleSubmit}>
+            <form role="search" onSubmit={this._handleSubmit}>
                 <div className="input-group">
                     <input 
                         className="form-control search-input"
