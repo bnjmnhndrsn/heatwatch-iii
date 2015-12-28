@@ -13,6 +13,7 @@
     "bootstrap-sass": "^3.3.6",
     "flux": "^2.1.1",
     "jquery": "^2.1.4",
+    "numeral": "^1.5.3",
     "react": "^0.14.1",
     "react-addons-linked-state-mixin": "^0.14.2",
     "react-dom": "^0.14.1",

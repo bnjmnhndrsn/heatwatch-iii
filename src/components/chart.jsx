@@ -1,13 +1,19 @@
 // Dependencies
 var React = require('react');
-var Backbone = require('backbone');
+var _ = require('underscore');
 
 var PendingItem = React.createClass({
     render: function(){
+        var temperature;
+        if (_.isNumber(this.props.temperature)){
+            temperature = Math.round(this.props.temperature);
+        } else {
+            temperature = 'N/A';
+        }
         return (
             <tr>
                 <td>{this.props.name}</td>
-                <td>{this.props.temperature ? this.props.temperature : 'N/A'}</td>
+                <td>{temperature}</td>
             </tr>
         )
     }
@@ -38,8 +44,8 @@ var LoadedItem = React.createClass({
         return (
             <tr className={className}>
                 <td>{this.props.name}</td>
-                <td>{this.props.temperature}</td>
-                <td>{difference}</td>
+                <td>{Math.round(this.props.temperature)}</td>
+                <td>{Math.round(difference)}</td>
             </tr>
         )
     }

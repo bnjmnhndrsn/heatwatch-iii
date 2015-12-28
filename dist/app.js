@@ -40955,12 +40955,18 @@
 	
 	// Dependencies
 	var React = __webpack_require__(2);
-	var Backbone = __webpack_require__(187);
+	var _ = __webpack_require__(186);
 	
 	var PendingItem = React.createClass({
 	    displayName: 'PendingItem',
 	
 	    render: function () {
+	        var temperature;
+	        if (_.isNumber(this.props.temperature)) {
+	            temperature = Math.round(this.props.temperature);
+	        } else {
+	            temperature = 'N/A';
+	        }
 	        return React.createElement(
 	            'tr',
 	            null,
@@ -40972,7 +40978,7 @@
 	            React.createElement(
 	                'td',
 	                null,
-	                this.props.temperature ? this.props.temperature : 'N/A'
+	                temperature
 	            )
 	        );
 	    }
@@ -41013,12 +41019,12 @@
 	            React.createElement(
 	                'td',
 	                null,
-	                this.props.temperature
+	                Math.round(this.props.temperature)
 	            ),
 	            React.createElement(
 	                'td',
 	                null,
-	                difference
+	                Math.round(difference)
 	            )
 	        );
 	    }
