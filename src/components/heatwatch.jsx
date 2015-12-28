@@ -23,7 +23,12 @@ var Heatwatch = React.createClass({
     },
     render: function(){
         return (
-            <div>
+            <div className="container">
+                <div className="row">
+                    <div className="col-md-12 text-center">
+                        <h1>Heatwatch III</h1>
+                    </div>
+                </div>
                 <Input />
                 <Chart items={this.state.items} location={this.state.location} />
             </div>

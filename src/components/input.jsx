@@ -6,7 +6,7 @@ var settings = require('../settings');
 var LocationActions = require('../actions/location-actions');
 var LocationStore = require('../stores/location-store');
 
-var InputForm = React.createClass({
+var InputBlock = React.createClass({
     getInitialState: function() {
         return {
             editable: true,
@@ -33,25 +33,45 @@ var InputForm = React.createClass({
         });
     },
     render: function(){
+        var inner;
+        
         if (this.state.isLoading) {
-            return (<div>Loading...</div>);
+            inner = <LoadingIndicator />;
         } else if (!this.state.editable) {
-            return (<div>
-                Location Set!
-                <button type="button" onClick={this._edit}>Edit</button>
-            </div>);
+            inner = <LoadedLocation location={this.state.location} startEditing={this._edit} />
+        } else {
+            inner = <InputForm />
         }
-        return (
-            <div>
-                <ZipCodeInput />
-                <LocationButton />
-            </div>
-        );
-    },
-    
+
+        return <div className="row input-section">{inner}</div>;
+    }
 });
 
-var ZipCodeInput = React.createClass({
+var LoadedLocation = React.createClass({
+    render: function(){
+        return (
+            <div className="col-md-12 form-inline">
+                <div className="form-group">
+                    <button 
+                        className="btn btn-primary" 
+                        type="button" 
+                        onClick={this.props.startEditing}
+                    >
+                        {this.props.location.name} 
+                    </button>
+                </div>
+            </div>
+        );
+    }
+});
+
+var LoadingIndicator = React.createClass({
+    render: function(){
+        return <div className="col-md-12">Loading...</div>;
+    }
+});
+
+var InputForm = React.createClass({
     getInitialState: function() {
         return {zip: ''};
     },
@@ -63,30 +83,32 @@ var ZipCodeInput = React.createClass({
     _onChange: function(e){
         this.setState({zip: e.target.value});
     },
-    render: function(){
-        return (
-            <form onSubmit={this._handleSubmit}>
-                <input 
-                    type="text" 
-                    name="zip" 
-                    placeholder="Enter your zipcode"
-                    value={this.state.zip} 
-                    onChange={this._onChange} 
-                />
-                <button type="sumbit">Submit</button>
-            </form>
-        )
-    }
-});
-
-var LocationButton = React.createClass({
     _handleClick: function(e){
         e.preventDefault();
         LocationActions.fetchFromLocation();
     },
     render: function(){
-        return (<button type="button" onClick={this._handleClick}>Find my location</button>);
+        return (
+            <form className="form col-md-6 col-md-offset-3" role="search" onSubmit={this._handleSubmit}>
+                <div className="input-group">
+                    <input 
+                        className="form-control search-input"
+                        type="text" 
+                        name="zip" 
+                        placeholder="Enter your zipcode"
+                        value={this.state.zip} 
+                        onChange={this._onChange} 
+                    />
+                    <div className="input-group-btn">
+                        <button className="btn btn-link geolocate-button" type="button" onClick={this._handleClick}>
+                            <span className="glyphicon glyphicon-screenshot"></span>
+                        </button>
+                        <button className="btn btn-primary" type="submit">Search</button>
+                    </div>
+                </div>
+              </form>
+        )
     }
 });
 
-module.exports = InputForm;
+module.exports = InputBlock;
